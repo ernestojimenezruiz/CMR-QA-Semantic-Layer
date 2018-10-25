@@ -2074,6 +2074,7 @@ A mismatch of 5-10% is still acceptable due to the difficulty of contouring the 
         <CMR-QA:shortLabel>2cv</CMR-QA:shortLabel>
         <CMR-QA:shortLabel>VLA</CMR-QA:shortLabel>
         <rdfs:label>Two chambers view</rdfs:label>
+        <rdfs:label>VLA view</rdfs:label>
         <skos:prefLabel xml:lang="en">Vertical Long Axis View</skos:prefLabel>
     </owl:Class>
     

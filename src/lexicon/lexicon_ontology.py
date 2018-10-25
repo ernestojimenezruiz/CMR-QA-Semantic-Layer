@@ -1,5 +1,5 @@
 from owlready2 import *
-from traitlets.config.application import catch_config_error
+#from traitlets.config.application import catch_config_error
 #import lexicon
 
 
@@ -20,27 +20,39 @@ class ExtractLexiconOntology:
         
         #List from owlready2
         onto_path.append(pathontos) #For local ontologies
+    
+    
+    def getLexiconForClasses(self):
+        return self.lexicon
+    
+    
+    def getSemGroupsForClasses(self):
+        return self.semGroups
       
       
-    def loadOntology(self):   
+    def loadOntology(self, classify):   
         
         self.onto = get_ontology(self.urionto)
         self.onto.load()
         
         #self.classifiedOnto = get_ontology(self.urionto + '_classified')        
-        with self.onto:
-            sync_reasoner()  #it does add inferences to ontology
+        if classify:
+            with self.onto:
+                sync_reasoner()  #it does add inferences to ontology
             
         #report problem with unsat (Nothing not declared....)
         #print(list(self.onto.inconsistent_classes()))
         
         
+        
+    def extractLexicon(self):
+            
         for cls in list(self.onto.classes()):
          
             self.lexicon[cls.name]=set()
             self.semGroups[cls.name]=set()
             
-            print(cls.name)
+            #print(cls.name)
             
             #self.lexicon[cls.name] = self.lexicon[cls.name] | set(cls.label)
             self.lexicon[cls.name].update(cls.label)
@@ -69,7 +81,7 @@ class ExtractLexiconOntology:
             
             #expand synonyms with parent ones or with rules?
             #off-axis in RV (or in certain view) -> RV off-axis
-            print(self.lexicon[cls.name])
+            #print(self.lexicon[cls.name])
             
             
             #Add semantic groups from itself and parents 
@@ -80,36 +92,18 @@ class ExtractLexiconOntology:
                 except AttributeError:
                     pass
             
-            print(self.semGroups[cls.name])
+            #print(self.semGroups[cls.name])
             
             #print(cls.iri)
             #print(cls.ancestors())
             #print(cls.descendants())
             #print(cls.equivalent_to)
-            
-            print(cls.label)
-            print('Preferred label')
-            
-            try:
-                print(cls.prefLabel)
-            except AttributeError:
-                pass
-                
-            print('Alt labels')
-            print(cls.altLabel)
-            print('Short labels')
-            print(cls.shortLabel)
-            
-            #We need to propagate from parents classes 
-            print('Sem group')
-            print(cls.semanticGroup)
-            print('Sem type')
-            print(cls.semanticType)
-            print('Sem type id')
-            print(cls.semanticTypeID)
-            #semanticGroup
-            #semanticType
-            #semanticTypeID
+            #print('Sem group')
+            #print(cls.semanticGroup)
+            #print('Sem type')
+            #print(cls.semanticType)
+            #print('Sem type id')
+            #print(cls.semanticTypeID)
             
             
         

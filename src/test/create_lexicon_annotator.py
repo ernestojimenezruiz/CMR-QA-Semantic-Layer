@@ -1,4 +1,5 @@
 from lexicon.lexicon_ontology import ExtractLexiconOntology
+from lexicon.store_lexicon import StoreLexiconOntology
 
 
 folder_ontos="/home/ejimenez-ruiz/Documents/UK_BioBank/CMR-QA-ontology"
@@ -8,6 +9,9 @@ uri_onto="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA"
 extractor = ExtractLexiconOntology(folder_ontos, uri_onto) 
 
 
+extractor.loadOntology(True) #Classify ontology=True
+extractor.extractLexicon()
 
+fileLex = 'cmr-qa.lex'
 
-extractor.loadOntology()
+writer = StoreLexiconOntology(extractor.getLexiconForClasses(), extractor.getSemGroupsForClasses(), fileLex)
