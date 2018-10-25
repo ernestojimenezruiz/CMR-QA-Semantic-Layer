@@ -1,0 +1,2140 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ukbiobank/ocmr_isg/IQA#"
+     xml:base="http://www.semanticweb.org/ukbiobank/ocmr_isg/IQA"
+     xmlns:CMR-QA="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:IQA="http://www.semanticweb.org/ukbiobank/ocmr_isg/IQA#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA/0.4.1"/>
+        <terms:creator>Valentina Carapella</terms:creator>
+        <terms:creator>Ernesto Jimenez-Ruiz</terms:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#semanticGroup -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#semanticGroup">
+        <rdfs:label>UMLS semantic group</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#semanticType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#semanticType">
+        <rdfs:label>UMLS semantic type</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#semanticTypeID -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#semanticTypeID">
+        <rdfs:label>UMLS semantic type Id</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#shortLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#shortLabel">
+        <rdfs:comment>Short label, possibly incomplete, but ocurring in quality assessment annotations to refer to an entity. For example &quot;Motion&quot; is the short label of &quot;Motion artefact&quot;.</rdfs:comment>
+        <rdfs:label>Short label</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdfs:label>Alternative label</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+        <rdfs:label>Preferred label</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAtCardiacCyclePhase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAtCardiacCyclePhase">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAtTime"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle_Phase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAtChamberLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAtChamberLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAt"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAtTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAtTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAtView -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAtView">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAt"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Plane"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasCardiacImage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasCardiacImage">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Image"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasImageIssue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasImageIssue">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasImagingDataset -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasImagingDataset">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasObserver -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasObserver">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Observer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasPart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityData">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Quality_Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasSequence -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasSequence"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#mayInfluence -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#mayInfluence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Image_Analysis_Outcome_Measures"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedIn"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#isPartOf"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInAllCardiacCycle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInAllCardiacCycle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInCardiacCycle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle"/>
+        <rdfs:comment>This predicate is used when something of interest is observed throughout the cardiac cycle.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInAllCardiacCyclePhase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInAllCardiacCyclePhase">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInCardiacCyclePhase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle_Phase"/>
+        <rdfs:comment>This predicate is used when something of interest is observed throughout a given cardiac cycle phase.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInCardiacCycle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInCardiacCycle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInTime"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle"/>
+        <rdfs:comment>This predicate is used when something of interest is observed at some point of the cardiac cycle. It is generic.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInCardiacCyclePhase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInCardiacCyclePhase">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInTime"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle_Phase"/>
+        <rdfs:comment>This predicate is used when something of interest is observed at some point in a specific phase of the cardiac cycle.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamber -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInOrganComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Chamber"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamberLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamberLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInOrganComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInOrganComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInOrganComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedIn"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Organ_Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInVentricularLayer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInVentricularLayer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInOrganComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ventricular_Layer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInVentricularRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInVentricularRegion">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInOrganComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ventricular_Region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInView -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInView">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedIn"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Imaging_Plane"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasLAQualityScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasLAQualityScore">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityScore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasLVQualityScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasLVQualityScore">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityScore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityComment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityComment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discarded</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optimal</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sub-optimal</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityScore">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment>General score to be computed</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasRAQualityScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasRAQualityScore">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityScore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasRVQualityScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasRVQualityScore">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityScore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInSliceCardinality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInSliceCardinality">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Few</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiple</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observerBackground -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observerBackground">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clinical</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Image Analyst</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observerExperience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observerExperience">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Early Training</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experienced</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supervisor</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observerId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observerId">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#personId"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#participantId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#participantId">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#personId"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Anonimyzed code for the participant, composed by anonimyzed name and id</rdfs:comment>
+        <rdfs:label>Patient id</rdfs:label>
+        <rdfs:label>Volunteer id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#personId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#personId"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#scanDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#scanDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>Scan date</rdfs:label>
+        <rdfs:label>Visit date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Aliasing_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Aliasing_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Processing_Dependant_Artefact"/>
+        <CMR-QA:shortLabel>Aliasing</CMR-QA:shortLabel>
+        <rdfs:label>Wraparound artefact</rdfs:label>
+        <skos:prefLabel>Aliasing artefact</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Aortic_View -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Aortic_View">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Plane"/>
+        <rdfs:label>Aortic view</rdfs:label>
+        <rdfs:label>Transverse aortic view</rdfs:label>
+        <skos:prefLabel>Aortic distensibility view</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Arrhythmia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Arrhythmia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Pathology"/>
+        <rdfs:label>Dysrhythmia</rdfs:label>
+        <rdfs:label>Irregular heartbeat</rdfs:label>
+        <skos:prefLabel>Arrhythmia</skos:prefLabel>
+        <skos:prefLabel>Heart arrhythmia</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
+        <CMR-QA:shortLabel>Artefact</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>Artifact</CMR-QA:shortLabel>
+        <rdfs:comment>An artefact can be defined as something that is visible in an image but it is artificial, and is often detrimental to diagnosis (Ferreira, PF et al. Cardiac magnetic resonance artefacts, JCMR 2013). An artefact can also be defined as a  feature  appearing in  an  image  that  is  not  present  in  the original  object (Erasmus LJ et al. A short overview of MRI artefacts, 2004).</rdfs:comment>
+        <rdfs:label>CMR artefact</rdfs:label>
+        <rdfs:label>Cardiac MRI artefact</rdfs:label>
+        <skos:prefLabel>Cardiovascular magnetic resonance artefacts</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Atrial_Diastole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Atrial_Diastole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle_Phase"/>
+        <skos:prefLabel>Atrial diastole</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Atrial_Fibrillation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Atrial_Fibrillation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Pathology"/>
+        <CMR-QA:shortLabel>AF</CMR-QA:shortLabel>
+        <rdfs:label>Atrial fibrillation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Atrial_Systole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Atrial_Systole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle_Phase"/>
+        <skos:prefLabel>Atrial systole</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#B0-field_Inhomogeneity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#B0-field_Inhomogeneity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Technical_Issue"/>
+        <skos:prefLabel>B0-field inhomogeneity</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#B0_Field_Inhomogeneity_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#B0_Field_Inhomogeneity_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Field_Inhomogeneity_Artefact"/>
+        <rdfs:label>B0 field inhomogeneity artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Blood_Flow_Motion_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Blood_Flow_Motion_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Motion_Artefact"/>
+        <rdfs:label>Blood flow motion</rdfs:label>
+        <skos:prefLabel>Blood flow motion artefact</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Blurring_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Blurring_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
+        <CMR-QA:shortLabel>Blurring</CMR-QA:shortLabel>
+        <rdfs:label>Blurring artefact</rdfs:label>
+        <skos:prefLabel>Blurring artefact</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Breathing_Motion_Artifact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Breathing_Motion_Artifact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Inter-view_Motion_Artefact"/>
+        <CMR-QA:shortLabel>Breathing</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>Breathing motion</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>Respiratory motion</CMR-QA:shortLabel>
+        <rdfs:label>Respiratory motion artefact</rdfs:label>
+        <skos:prefLabel>Breathing motion artefact</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Atrium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Atrium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Chamber"/>
+        <CMR-QA:shortLabel>Atria</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>Atrium</CMR-QA:shortLabel>
+        <rdfs:label>Cardiac atria</rdfs:label>
+        <skos:prefLabel>Cardiac atrium</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Chamber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Chamber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Organ_Component"/>
+        <rdfs:label>Chamber of the heart</rdfs:label>
+        <rdfs:label>Heart chamber</rdfs:label>
+        <skos:prefLabel>Cardiac chamber</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Diastole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Systole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <CMR-QA:semanticGroup>CONC</CMR-QA:semanticGroup>
+        <CMR-QA:semanticType>Temporal Concept</CMR-QA:semanticType>
+        <CMR-QA:semanticTypeID>T079</CMR-QA:semanticTypeID>
+        <skos:prefLabel>Cardiac cycle</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle_Phase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle_Phase">
+        <CMR-QA:semanticGroup>CONC</CMR-QA:semanticGroup>
+        <CMR-QA:semanticType>Temporal Concept</CMR-QA:semanticType>
+        <CMR-QA:semanticTypeID>T079</CMR-QA:semanticTypeID>
+        <skos:prefLabel>Cardiac cycle phase</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Image -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Image">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAtCardiacCyclePhase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle_Phase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAtChamberLocation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#acquiredAtView"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Plane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <CMR-QA:semanticGroup>OBJC</CMR-QA:semanticGroup>
+        <CMR-QA:semanticType>Entity</CMR-QA:semanticType>
+        <CMR-QA:semanticTypeID>T071</CMR-QA:semanticTypeID>
+        <rdfs:comment>In this study, an image unit will typically be referred as slice.</rdfs:comment>
+        <rdfs:label>Slice</rdfs:label>
+        <skos:prefLabel>Cardiac image</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Image_Analysis_Outcome_Measures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Image_Analysis_Outcome_Measures">
+        <CMR-QA:semanticGroup>CONC</CMR-QA:semanticGroup>
+        <CMR-QA:semanticGroup>PHYS</CMR-QA:semanticGroup>
+        <CMR-QA:semanticType>Clinical Attribute</CMR-QA:semanticType>
+        <CMR-QA:semanticType>Quantitative Concept</CMR-QA:semanticType>
+        <CMR-QA:semanticTypeID>T081</CMR-QA:semanticTypeID>
+        <CMR-QA:semanticTypeID>T201</CMR-QA:semanticTypeID>
+        <rdfs:comment>In this class we provide a list of outcome measures that are obtained after the images are contoured and are typically computed by the same software used to produce the contours.</rdfs:comment>
+        <rdfs:label>Image analysis outcome measures</rdfs:label>
+        <skos:prefLabel>Cardiac image analysis outcome measures</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Imaging_Plane -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Imaging_Plane">
+        <CMR-QA:semanticGroup>CONC</CMR-QA:semanticGroup>
+        <CMR-QA:semanticType>Spatial Concept</CMR-QA:semanticType>
+        <CMR-QA:semanticTypeID>T082</CMR-QA:semanticTypeID>
+        <CMR-QA:shortLabel>Image view</CMR-QA:shortLabel>
+        <rdfs:label>Cardiac imaging view</rdfs:label>
+        <skos:altLabel>Cardiac view</skos:altLabel>
+        <skos:prefLabel>Cardiac imaging plane</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Data">
+        <CMR-QA:semanticGroup>PHEN</CMR-QA:semanticGroup>
+        <CMR-QA:semanticGroup>PROC</CMR-QA:semanticGroup>
+        <CMR-QA:semanticType>Diagnostic Procedure</CMR-QA:semanticType>
+        <CMR-QA:semanticType>Laboratory Procedure</CMR-QA:semanticType>
+        <CMR-QA:semanticType>Laboratory or Test Result</CMR-QA:semanticType>
+        <CMR-QA:semanticTypeID>T034</CMR-QA:semanticTypeID>
+        <CMR-QA:semanticTypeID>T059</CMR-QA:semanticTypeID>
+        <CMR-QA:semanticTypeID>T060</CMR-QA:semanticTypeID>
+        <rdfs:label>Cardiac MRI imaging data</rdfs:label>
+        <rdfs:label>Cardiac magenitic resonance imaging</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Plane -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Plane">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Imaging_Plane"/>
+        <rdfs:label>Cardiac MRI imaging view</rdfs:label>
+        <skos:prefLabel>Cardiac MRI imaging plane</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Motion_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Motion_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Inter-view_Motion_Artefact"/>
+        <CMR-QA:shortLabel>Cardiac motion</CMR-QA:shortLabel>
+        <rdfs:label>Cardiac motion artefact</rdfs:label>
+        <skos:prefLabel>Cardiac motion artefact</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Ventricle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Ventricle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Chamber"/>
+        <CMR-QA:shortLabel>Ventricle</CMR-QA:shortLabel>
+        <rdfs:label>Heart ventricle</rdfs:label>
+        <skos:prefLabel>Cardiac ventricle</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Apex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Apex">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Location"/>
+        <CMR-QA:shortLabel>Apex</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>Apical</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>Chamber apex</CMR-QA:shortLabel>
+        <rdfs:label>Apical region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Base -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Base">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Location"/>
+        <CMR-QA:shortLabel>Basal</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>Base</CMR-QA:shortLabel>
+        <rdfs:label>Basal region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Location">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Organ_Component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Chamber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel>Chamber location</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chemical_Shift -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chemical_Shift">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Processing_Dependant_Artefact"/>
+        <rdfs:label>Chemical shift</rdfs:label>
+        <skos:altLabel>Misregistration</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chemical_Shift_Second_Kind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chemical_Shift_Second_Kind">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chemical_Shift"/>
+        <rdfs:label>Chemical shift 2nd kind</rdfs:label>
+        <skos:altLabel>Black boundary artefact</skos:altLabel>
+        <skos:altLabel>Black line artifact</skos:altLabel>
+        <skos:altLabel>Edging artifact</skos:altLabel>
+        <skos:altLabel>Indian ink artefact</skos:altLabel>
+        <skos:altLabel>Phase cancellation artifact</skos:altLabel>
+        <skos:altLabel>Phase canecllation artefact</skos:altLabel>
+        <skos:prefLabel>Fat-water signal cancellation artefact</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Data"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasCardiacImage"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Image"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <CMR-QA:shortLabel>Cine</CMR-QA:shortLabel>
+        <rdfs:label>Cine MRI</rdfs:label>
+        <skos:prefLabel>Cine-MRI</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Image_Analysis_Outcome_Measures"/>
+        <skos:prefLabel>Cine-MRI analysis outcome measures</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Dark_Bands_Artifact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Dark_Bands_Artifact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Intensity_Artifact"/>
+        <rdfs:label>Black bands artefact</rdfs:label>
+        <rdfs:label>Dark bands artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Dark_Ghosting_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Dark_Ghosting_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ghosting_Artefact"/>
+        <rdfs:label>Dark ghosting artefact</rdfs:label>
+        <skos:prefLabel>Dark ghosting artefact</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Diastole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Diastole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle_Phase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Atrial_Systole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#End-Diastole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Diastole</rdfs:label>
+        <rdfs:label>Ventricular Diastole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ejection_Fraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ejection_Fraction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures"/>
+        <CMR-QA:shortLabel>EF</CMR-QA:shortLabel>
+        <rdfs:comment>Faction of  blood ejected from a given chamber in a cardiac cycle, computed as EF=SV/EDV</rdfs:comment>
+        <skos:prefLabel>Ejection fraction</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#End-Diastole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#End-Diastole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle_Phase"/>
+        <CMR-QA:shortLabel>ED</CMR-QA:shortLabel>
+        <rdfs:label>End diastole</rdfs:label>
+        <rdfs:label>Ventricular End-Diastole</rdfs:label>
+        <skos:prefLabel>End-Diastole</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#End-Systole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#End-Systole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle_Phase"/>
+        <CMR-QA:shortLabel>ES</CMR-QA:shortLabel>
+        <rdfs:label>End systole</rdfs:label>
+        <rdfs:label>Ventricular End-Systole</rdfs:label>
+        <skos:prefLabel>End-Systole</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#End_Diastolic_Volume -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#End_Diastolic_Volume">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures"/>
+        <CMR-QA:shortLabel>EDV</CMR-QA:shortLabel>
+        <rdfs:comment>Volume of the blood contained in a given chamber at end diastole, usually provided in ml.</rdfs:comment>
+        <skos:prefLabel>End diastolic volume</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#End_Systolic_Volume -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#End_Systolic_Volume">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures"/>
+        <CMR-QA:shortLabel>ESV</CMR-QA:shortLabel>
+        <rdfs:comment>Volume of the blood contained in a given chamber at end systole, usually provided in ml.</rdfs:comment>
+        <skos:prefLabel>End systolic volume</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Endocardium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Endocardium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ventricular_Layer"/>
+        <skos:prefLabel>Endocardium</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Epicardium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Epicardium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ventricular_Layer"/>
+        <skos:prefLabel>Epicardium</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Field_Inhomogeneity_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Field_Inhomogeneity_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Machine_Related_Artefact"/>
+        <rdfs:label>Field inhomogeneity artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Flow-related_Signal_Loss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Flow-related_Signal_Loss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Blood_Flow_Motion_Artefact"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Loss_Artefact"/>
+        <rdfs:label>Flow-related signal loss</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ghosting_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ghosting_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
+        <CMR-QA:shortLabel>Ghosting</CMR-QA:shortLabel>
+        <rdfs:label>Ghost artefact</rdfs:label>
+        <skos:prefLabel>Ghosting artefact</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Gibbs_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Gibbs_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ringing_Artefact"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Processing_Dependant_Artefact"/>
+        <rdfs:label>Gibbs artefact</rdfs:label>
+        <skos:altLabel>Spectral leakage artefact</skos:altLabel>
+        <skos:altLabel>Truncation artefact</skos:altLabel>
+        <skos:prefLabel>Gibbs artefact</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#HLA_View -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#HLA_View">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Long_Axis_View"/>
+        <CMR-QA:shortLabel>4ch</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>4cv</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>HLA</CMR-QA:shortLabel>
+        <rdfs:label>Four chambers view</rdfs:label>
+        <rdfs:label>HLA view</rdfs:label>
+        <skos:prefLabel xml:lang="en">Horizontal Long Axis View</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#HLA_off_axis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#HLA_off_axis">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInView"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#HLA_View"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInView"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#HLA_View"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Presence of LVOT in 4 chambers view will also indicate a wrong plane</rdfs:comment>
+        <skos:prefLabel>HLA off axis</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Heart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Heart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Organ"/>
+        <CMR-QA:semanticGroup>ANAT</CMR-QA:semanticGroup>
+        <skos:prefLabel>Heart</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Distortion_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Distortion_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
+        <rdfs:label>Image distortion artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
+        <rdfs:label xml:lang="en">Foreshortened</rdfs:label>
+        <rdfs:label xml:lang="en">Off-axis</rdfs:label>
+        <rdfs:label xml:lang="en">Out of axis</rdfs:label>
+        <rdfs:label xml:lang="en">Out of plane</rdfs:label>
+        <rdfs:label>Wrong image plane</rdfs:label>
+        <rdfs:label xml:lang="en">Wrong plane</rdfs:label>
+        <skos:prefLabel>Image planning issue</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Off axis</skos:prefLabel>
+        <skos:prefLabel>Wrong image plane orientation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#mayInfluence"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInCardiacCyclePhase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle_Phase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamber"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Chamber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInView"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Imaging_Plane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamberLocation"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInSliceCardinality"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Few</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiple</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <CMR-QA:semanticGroup>CONC</CMR-QA:semanticGroup>
+        <CMR-QA:semanticType>Finding</CMR-QA:semanticType>
+        <CMR-QA:semanticType>Qualitative Concept</CMR-QA:semanticType>
+        <CMR-QA:semanticTypeID>T033</CMR-QA:semanticTypeID>
+        <CMR-QA:semanticTypeID>T080</CMR-QA:semanticTypeID>
+        <rdfs:comment>An issue is observed in a view, chamber and cardiac cycle. Optionally one may define more fine grained description (if it applies) about concrete chamber location (e.g., apex) or if single or multible slices were affected.</rdfs:comment>
+        <skos:prefLabel>Image quality issue</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Inter-view_Motion_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Inter-view_Motion_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Motion_Artefact"/>
+        <rdfs:label>Inter-view motion artefact</rdfs:label>
+        <skos:altLabel>Inter-view Artefact</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Intra-view_Motion_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Intra-view_Motion_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Motion_Artefact"/>
+        <rdfs:label>Intra-view motion artefact</rdfs:label>
+        <skos:altLabel>Intra-view artefact</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#LA_off_axis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#LA_off_axis">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamber"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Atrium"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamber"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Atrium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>LA off axis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#LVOT_Coronal_View -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#LVOT_Coronal_View">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#LVOT_View"/>
+        <skos:prefLabel>LVOT coronal view</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#LVOT_Sagittal_View -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#LVOT_Sagittal_View">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#LVOT_View"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Long_Axis_View"/>
+        <CMR-QA:shortLabel>3ch</CMR-QA:shortLabel>
+        <skos:prefLabel>LVOT sagittal view</skos:prefLabel>
+        <skos:prefLabel>Three chambers view</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#LVOT_View -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#LVOT_View">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Plane"/>
+        <rdfs:label>LVOT view</rdfs:label>
+        <skos:prefLabel>Left Ventricular Outflow Tract view</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#LV_off_axis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#LV_off_axis">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamber"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamber"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>LV off axis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Lack_Coverage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Lack_Coverage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
+        <rdfs:comment>At acquisition time, the short axis stack might not cover the whole extent of the ventricles. This might affect either the basal or apical part of the ventricles. We refer to this incorrect stack acquisition as &quot;lack of coverage&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lack of coverage</rdfs:label>
+        <rdfs:label>Not fully covered</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Atrium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Atrium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Atrium"/>
+        <CMR-QA:shortLabel>LA</CMR-QA:shortLabel>
+        <skos:prefLabel>Left atrium</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Ventricle"/>
+        <CMR-QA:shortLabel>LV</CMR-QA:shortLabel>
+        <skos:prefLabel>Left ventricle</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle_Apex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle_Apex">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Apex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The left ventricular apex is considered a synonym of the heart apex. The right ventricle has its own apex, which at the moment is not specified in the ontology because it is never referred to in the quality assessment process.</rdfs:comment>
+        <rdfs:label>Apex of the heart</rdfs:label>
+        <rdfs:label>Heart apex</rdfs:label>
+        <rdfs:label>Left ventricular apex</rdfs:label>
+        <skos:prefLabel>Left ventricle apex</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle_Base -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle_Base">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Base"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>LV base</rdfs:label>
+        <skos:prefLabel>Left ventricle base</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle_Midventricle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle_Midventricle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Midventricular_Region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel>Midventriculular region of the left ventricle</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricular_Outflow_Tract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricular_Outflow_Tract">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ventricular_Region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <CMR-QA:shortLabel>LVOT</CMR-QA:shortLabel>
+        <skos:prefLabel>Left ventricular outflow tract</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Long_Axis_View -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Long_Axis_View">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Plane"/>
+        <CMR-QA:shortLabel>LAX</CMR-QA:shortLabel>
+        <skos:prefLabel>Long axis view</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Machine_Related_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Machine_Related_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
+        <rdfs:label>Hardware related artefact</rdfs:label>
+        <skos:prefLabel>Machine related artefact</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Midventricular_Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Midventricular_Region">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Location"/>
+        <rdfs:label>Midventricle</rdfs:label>
+        <skos:prefLabel>Midventricular region</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Missing_data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Missing_data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Technical_Issue"/>
+        <CMR-QA:shortLabel>Missing</CMR-QA:shortLabel>
+        <rdfs:label>Incomplete data</rdfs:label>
+        <skos:prefLabel>Missing data</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Motion_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Motion_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Patient-related_Artifact"/>
+        <CMR-QA:shortLabel>Motion</CMR-QA:shortLabel>
+        <rdfs:label>Motion artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Motion_Ringing_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Motion_Ringing_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Motion_Artefact"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ringing_Artefact"/>
+        <rdfs:label>Motion ringing artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Myocardial_Mass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Myocardial_Mass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures"/>
+        <CMR-QA:shortLabel>Mass</CMR-QA:shortLabel>
+        <rdfs:comment>The amount of tissue contained between endocardial and epycardial layers for a given chamber, usually excluding papillary muscles or trabeculations. This measure is most commonly computed for the left ventricle, sometimes for the right ventricle. Usually provided in grams.</rdfs:comment>
+        <rdfs:comment>The myocardial mass of a given chamber (typically the LV) should be the same at each cardiac phase. Therefore, when there is a mismatch between the computed mass at ED and ES, it can be due to a image quality issue or (most likely) a countouring mistake.
+A mismatch of 5-10% is still acceptable due to the difficulty of contouring the endocardium in ES,especially when the papillary muscles are not included in the mass computation.</rdfs:comment>
+        <skos:prefLabel>Myocardial mass</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Myocardium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Myocardium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ventricular_Layer"/>
+        <skos:prefLabel>Myocardium</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Observer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Observer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observerBackground"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observerExperience"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observerId"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <CMR-QA:semanticGroup>LIVB</CMR-QA:semanticGroup>
+        <CMR-QA:semanticType>Human</CMR-QA:semanticType>
+        <CMR-QA:semanticTypeID>T016</CMR-QA:semanticTypeID>
+        <rdfs:comment>Person who has carried out the task of performing some type of image analysis or image quality assessment on the imaging dataset.</rdfs:comment>
+        <skos:prefLabel>Observer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Off-resonance_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Off-resonance_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
+        <rdfs:label>Off-resonance artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Organ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Organ">
+        <CMR-QA:semanticGroup>ANAT</CMR-QA:semanticGroup>
+        <CMR-QA:semanticType>Body Part, Organ, or Organ Component</CMR-QA:semanticType>
+        <CMR-QA:semanticTypeID>T023</CMR-QA:semanticTypeID>
+        <skos:prefLabel>Organ</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Organ_Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Organ_Component">
+        <CMR-QA:semanticGroup>ANAT</CMR-QA:semanticGroup>
+        <CMR-QA:semanticType>Body Part, Organ, or Organ Component</CMR-QA:semanticType>
+        <CMR-QA:semanticTypeID>T023</CMR-QA:semanticTypeID>
+        <skos:prefLabel>Organ component</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Pathology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Pathology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
+        <rdfs:comment>Comments regarding presence of pathology should only be provided by clinically trained users. In general, it is not requested to specify pathology unless it is the suspected main cause of the quality issue. For example, arrhythmia causing mistriggering. Non-clinical users should only flag the presence of mistriggering as a technical issue.</rdfs:comment>
+        <skos:prefLabel>Pathology</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Patient-related_Artifact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Patient-related_Artifact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
+        <rdfs:label>Patient related artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Phase_Contrast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Phase_Contrast">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Data"/>
+        <skos:prefLabel>Phase contrast</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Poor_Quality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Poor_Quality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Unspecified_Issue"/>
+        <CMR-QA:shortLabel>Poor</CMR-QA:shortLabel>
+        <rdfs:label>Bad quality</rdfs:label>
+        <skos:prefLabel>Poor quality</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#RA_off_axis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#RA_off_axis">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamber"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Right_Atrium"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamber"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Right_Atrium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>RA off axis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#ROI_area -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#ROI_area">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures"/>
+        <rdfs:comment>Area of a generic region of interest (ROI) in the image. Depending on the type of tissue it can be given in pixels^2, cm^2.</rdfs:comment>
+        <skos:prefLabel>ROI area</skos:prefLabel>
+        <skos:prefLabel>Region of interest area</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#RV_off_axis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#RV_off_axis">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamber"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Right_Ventricle"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInChamber"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Right_Ventricle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>RV off axis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Right_Atrium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Right_Atrium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Atrium"/>
+        <CMR-QA:shortLabel>RA</CMR-QA:shortLabel>
+        <skos:prefLabel>Right atrium</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Right_Ventricle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Right_Ventricle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Ventricle"/>
+        <CMR-QA:shortLabel>RV</CMR-QA:shortLabel>
+        <skos:prefLabel>Right ventricle</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ringing_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ringing_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
+        <CMR-QA:shortLabel>Ringing</CMR-QA:shortLabel>
+        <rdfs:label>Ringing artefact</rdfs:label>
+        <skos:altLabel>Banding artefact</skos:altLabel>
+        <skos:altLabel>Rim artefact</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#SAS_View -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#SAS_View">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Plane"/>
+        <CMR-QA:shortLabel>SAS</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>SAX</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>Short axis</CMR-QA:shortLabel>
+        <rdfs:label>SAS stack</rdfs:label>
+        <rdfs:label>SAS view</rdfs:label>
+        <rdfs:label>SAX stack</rdfs:label>
+        <rdfs:label>SAX view</rdfs:label>
+        <rdfs:label xml:lang="en">Short Axis Stack View</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#SAX_off_axis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#SAX_off_axis">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInView"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#SAS_View"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInView"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#SAS_View"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>SAX off axis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Scout_Image -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Scout_Image">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Image"/>
+        <rdfs:comment>Scout images are used in MR to identify the relative anatomical position of a set of  images.</rdfs:comment>
+        <rdfs:label>Localizer image</rdfs:label>
+        <skos:prefLabel>Scout image</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Septum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Septum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ventricular_Region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Left_Ventricle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Right_Ventricle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel>Septum</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Intensity_Artifact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Intensity_Artifact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
+        <rdfs:label>Signal intensity artifact</rdfs:label>
+        <rdfs:label>Signal variation artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Loss_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Loss_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Intensity_Artifact"/>
+        <CMR-QA:shortLabel>Signal loss</CMR-QA:shortLabel>
+        <rdfs:label>Signal loss artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Processing_Dependant_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Processing_Dependant_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
+        <skos:prefLabel>Signal processing related artefact</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Spatial_Distortion_Artefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Spatial_Distortion_Artefact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Distortion_Artefact"/>
+        <rdfs:label>Spatial distortion artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Stroke_Volume -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Stroke_Volume">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures"/>
+        <CMR-QA:shortLabel>SV</CMR-QA:shortLabel>
+        <rdfs:comment>Stroke volume is the difference between end diastolic and end systolic volumes, for a given chamber. SV=EDV-ESV</rdfs:comment>
+        <rdfs:comment>Stroke volume is the difference in blood volume inside the ventricle between end diastole and end systole. Stroke volumes for the left and right ventricle should be approximately the same,with a 5-10% mismatch. Higher levels of mismatch can indicate either a technical issue (such as lack of coverage or artifact) or, less likely, a patient issue (such as pathology).</rdfs:comment>
+        <skos:prefLabel>Stroke volume</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Systole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Systole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_Cycle_Phase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Atrial_Diastole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#End-Systole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Systole</rdfs:label>
+        <rdfs:label>Ventricular Systole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#T1-Mapping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#T1-Mapping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Data"/>
+        <rdfs:label>T1 mapping</rdfs:label>
+        <skos:prefLabel>T1-Mapping</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Tagging_MRI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Tagging_MRI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Data"/>
+        <skos:prefLabel>Tagging MRI</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Technical_Issue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Technical_Issue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
+        <rdfs:comment>Issues caused by software, hardware or data format.</rdfs:comment>
+        <skos:prefLabel>Technical issue</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Triggering_Issue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Triggering_Issue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Technical_Issue"/>
+        <rdfs:label>ECG gating issue</rdfs:label>
+        <rdfs:label>Electrocardiogram gating issue</rdfs:label>
+        <rdfs:label>Miss-triggering</rdfs:label>
+        <rdfs:label>Mistriggered</rdfs:label>
+        <rdfs:label>Mistriggering</rdfs:label>
+        <rdfs:label>Poor cardiac triggering</rdfs:label>
+        <rdfs:label>Poor triggering</rdfs:label>
+        <skos:prefLabel>Triggering issue</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Cine-MRI_Quality_Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Cine-MRI_Quality_Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Quality_Data"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasLAQualityScore"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasLVQualityScore"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasRAQualityScore"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasRVQualityScore"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel>UK Biobank cine-MRI quality data</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Quality_Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Quality_Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Study"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasImagingDataset"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cardiac_MRI_Imaging_Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasObserver"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Observer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasImageIssue"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityLevel"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityScore"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityComment"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>UK Biobank quality data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Study -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Study">
+        <CMR-QA:semanticGroup>PROC</CMR-QA:semanticGroup>
+        <CMR-QA:semanticType>Research Activity</CMR-QA:semanticType>
+        <CMR-QA:semanticTypeID>T062</CMR-QA:semanticTypeID>
+        <rdfs:comment>UK Biobank related concepts</rdfs:comment>
+        <skos:prefLabel>UK Biobank</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_T1-Mapping_Quality_Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_T1-Mapping_Quality_Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Quality_Data"/>
+        <skos:prefLabel>UK Biobank T1-Mapping quality data</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Visit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Visit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Study"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityData"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#UK_Biobank_Quality_Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#participantId"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#scanDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel>UK Biobank visit</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Unspecified_Issue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Unspecified_Issue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
+        <rdfs:comment>Cases were the concrete issue is not specified</rdfs:comment>
+        <rdfs:label>Unknown issue</rdfs:label>
+        <skos:prefLabel>Unspecified issue</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#VLA_View -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#VLA_View">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Long_Axis_View"/>
+        <CMR-QA:shortLabel>2ch</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>2cv</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>VLA</CMR-QA:shortLabel>
+        <rdfs:label>Two chambers view</rdfs:label>
+        <skos:prefLabel xml:lang="en">Vertical Long Axis View</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#VLA_off_axis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#VLA_off_axis">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInView"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#VLA_View"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#observedInView"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#VLA_View"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel>VLA off axis</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ventricular_Layer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ventricular_Layer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Organ_Component"/>
+        <skos:prefLabel>Ventricular layer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ventricular_Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ventricular_Region">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Organ_Component"/>
+        <rdfs:label>Ventricular region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ventricular_Stroke_Volume -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ventricular_Stroke_Volume">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Stroke_Volume"/>
+        <CMR-QA:shortLabel>LVSV</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>RVSV</CMR-QA:shortLabel>
+        <rdfs:comment>Stroke volume is the difference in blood volume inside the ventricle between end diastole and end systole. Stroke volumes for the left and right ventricle should be approximately the same,with a 5-10% mismatch. Higher levels of mismatch can indicate either a technical issue (such as lack of coverage or artifact) or, less likely, a patient issue (such as pathology).</rdfs:comment>
+        <skos:prefLabel>Ventricular stroke volume</skos:prefLabel>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
