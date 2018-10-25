@@ -11,8 +11,13 @@ UK Biobank Cardiac Cine MRI pilot study. This semantic layer will be a powerful 
 efficiently query image databases based on quality information extracted from the
 annotations. Our approach has the potential to be extended to broader projects and ultimately employed in the clinical setting.
 
+## CMR-QA Ontology
+- Current version ([v0.4.1](https://github.com/ernestojimenezruiz/CMR-QA-Semantic-Layer/blob/master/ontology/CMR-QA.owl), October 25, 2018): [OWL format](https://raw.githubusercontent.com/ernestojimenezruiz/CMR-QA-Semantic-Layer/master/ontology/CMR-QA.owl) 
+
 ## References
 
 - Valentina Carapella, Ernesto Jiménez-Ruiz, Elena Lukaschuk, Nay Aung, Kenneth Fung, José Miguel Paiva, Mihir Sanghvi, Stefan Neubauer, Steffen E. Petersen, Ian Horrocks, Stefan K. Piechnik:
 **Towards the Semantic Enrichment of Free-Text Annotation of Image Quality Assessment for UK Biobank Cardiac Cine MRI Scans**. 
 LABELS/DLMIA@MICCAI 2016: 238-248. ([PDF](https://www.cs.ox.ac.uk/files/8298/ukbb-labels-2016_id7.pdf))
+- Ernesto Jiménez-Ruiz, Valentina Carapella, Elena Lukaschuk, Nay Aung, Kenneth Fung, José Miguel Paiva, Mihir Sanghvi, Stefan Neubauer, Steffen E. Petersen, Ian Horrocks, Stefan K. Piechnik:
+**Towards the Creation of the Cardiovascular Magnetic Resonance Quality Assessment Ontology (CMR-QA)**. SWAT4LS 2016. ([PDF](http://ceur-ws.org/Vol-1795/paper22.pdf))
