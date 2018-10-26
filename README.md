@@ -17,6 +17,7 @@ annotations. Our approach has the potential to be extended to broader projects a
 
 ## CMR-QA Ontology
 - Current version ([v0.4.1](https://github.com/ernestojimenezruiz/CMR-QA-Semantic-Layer/blob/master/ontology/CMR-QA.owl), October 25, 2018): [OWL format](https://raw.githubusercontent.com/ernestojimenezruiz/CMR-QA-Semantic-Layer/master/ontology/CMR-QA.owl) 
+- Created with [Protégé Desktop](https://protege.stanford.edu/)
 
 ## References
 
