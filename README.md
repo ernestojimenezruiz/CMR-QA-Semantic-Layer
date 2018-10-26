@@ -11,6 +11,10 @@ UK Biobank Cardiac Cine MRI pilot study. This semantic layer will be a powerful 
 efficiently query image databases based on quality information extracted from the
 annotations. Our approach has the potential to be extended to broader projects and ultimately employed in the clinical setting.
 
+## Source dependencies
+- [Python 3](https://www.python.org/)
+- [Owlready2](https://pypi.org/project/Owlready2/): pip install Owlready2
+
 ## CMR-QA Ontology
 - Current version ([v0.4.1](https://github.com/ernestojimenezruiz/CMR-QA-Semantic-Layer/blob/master/ontology/CMR-QA.owl), October 25, 2018): [OWL format](https://raw.githubusercontent.com/ernestojimenezruiz/CMR-QA-Semantic-Layer/master/ontology/CMR-QA.owl) 
 

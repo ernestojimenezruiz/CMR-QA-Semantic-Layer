@@ -1,5 +1,5 @@
 import os
-import sys
+#import sys
 #Example
 #LA_off_axis:SPAT|LA off axis
 #LA_off_axis:SPAT|Left Atrium off axis
