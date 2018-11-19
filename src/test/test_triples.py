@@ -11,7 +11,7 @@ file_csv = '/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100.cs
 
 #From excel to CSV
 data_xls = pd.read_excel('/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100.xlsx', 'Sheet1', index_col=None)
-data_xls.to_csv('file_csv', encoding='utf-8')
+data_xls.to_csv(file_csv, encoding='utf-8')
     
 
 #qa_reader = CSVQAReader('/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100.csv')    
