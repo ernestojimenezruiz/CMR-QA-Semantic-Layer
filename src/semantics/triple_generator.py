@@ -6,7 +6,7 @@ Created on 19 Nov 2018
 from csv_utils.csv_reader import CSVQAReader
 from rdflib import graph, URIRef, BNode, Literal
 from rdflib.namespace import RDF, RDFS, OWL
-
+from constants import CMR_QA
 
 class TripleGenerator(object):
     '''
@@ -37,6 +37,15 @@ class TripleGenerator(object):
         self.rdfgraph = graph()
         
         #Instances of http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Quality_Data
+        CMR_QA.Cine_MRI_Quality_Data
+        
+        
+        ##We need to create new URI for each:
+        #imaging scan visit
+        #quality data
+        #observer: can we have an additional table? 
+        
+        
         
         #Examples
         #bob = URIRef("http://example.org/people/Bob")

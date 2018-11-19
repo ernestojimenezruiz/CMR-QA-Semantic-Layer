@@ -14,10 +14,11 @@ annotations. Our approach has the potential to be extended to broader projects a
 ## Source dependencies
 - [Python 3](https://www.python.org/)
 - [Owlready2](https://pypi.org/project/Owlready2/): pip install Owlready2
+- [RDFLib](https://rdflib.readthedocs.io/en/stable/gettingstarted.html): pip install rdflib
 
 ## CMR-QA Ontology
 - Current version ([v0.4.5](https://github.com/ernestojimenezruiz/CMR-QA-Semantic-Layer/blob/master/ontology/CMR-QA.owl), October, 2018): [OWL format](https://raw.githubusercontent.com/ernestojimenezruiz/CMR-QA-Semantic-Layer/master/ontology/CMR-QA.owl) 
-- CMR-QA in [BioPortal](https://bioportal.bioontology.org/ontologies/CMR-QA/)
+- CMR-QA in [BioPortal](http://purl.bioontology.org/ontology/CMR-QA)
 - Created with [Protégé Desktop](https://protege.stanford.edu/)
 
 ## References
