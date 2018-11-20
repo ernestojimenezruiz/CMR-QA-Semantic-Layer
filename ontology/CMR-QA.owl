@@ -586,9 +586,9 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Arrhythmia">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Pathology"/>
+        <rdfs:label>Arrhythmia</rdfs:label>
         <rdfs:label>Dysrhythmia</rdfs:label>
         <rdfs:label>Irregular heartbeat</rdfs:label>
-        <skos:prefLabel>Arrhythmia</skos:prefLabel>
         <skos:prefLabel>Heart arrhythmia</skos:prefLabel>
     </owl:Class>
     
@@ -622,7 +622,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Atrial_Fibrillation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Pathology"/>
         <CMR-QA:shortLabel>AF</CMR-QA:shortLabel>
-        <rdfs:label>Atrial fibrillation</rdfs:label>
+        <skos:prefLabel>Atrial fibrillation</skos:prefLabel>
     </owl:Class>
     
 
@@ -636,20 +636,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#B0-field_Inhomogeneity -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#B0-field_Inhomogeneity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Technical_Issue"/>
-        <skos:prefLabel>B0-field inhomogeneity</skos:prefLabel>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#B0_Field_Inhomogeneity_Artefact -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#B0_Field_Inhomogeneity_Artefact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Field_Inhomogeneity_Artefact"/>
-        <rdfs:label>B0 field inhomogeneity artefact</rdfs:label>
+        <CMR-QA:shortLabel>B0 field inhomogeneity</CMR-QA:shortLabel>
+        <skos:prefLabel>B0 field inhomogeneity artefact</skos:prefLabel>
     </owl:Class>
     
 
@@ -800,7 +792,7 @@
         <CMR-QA:semanticTypeID>T082</CMR-QA:semanticTypeID>
         <CMR-QA:shortLabel>Image view</CMR-QA:shortLabel>
         <rdfs:label>Cardiac imaging view</rdfs:label>
-        <skos:altLabel>Cardiac view</skos:altLabel>
+        <rdfs:label>Cardiac view</rdfs:label>
         <skos:prefLabel>Cardiac imaging plane</skos:prefLabel>
     </owl:Class>
     
@@ -818,7 +810,7 @@
         <CMR-QA:semanticTypeID>T059</CMR-QA:semanticTypeID>
         <CMR-QA:semanticTypeID>T060</CMR-QA:semanticTypeID>
         <rdfs:label>Cardiac MRI imaging data</rdfs:label>
-        <rdfs:label>Cardiac magenitic resonance imaging</rdfs:label>
+        <skos:prefLabel>Cardiac magenitic resonance imaging</skos:prefLabel>
     </owl:Class>
     
 
@@ -897,8 +889,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chemical_Shift">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Processing_Dependant_Artefact"/>
-        <rdfs:label>Chemical shift</rdfs:label>
-        <skos:altLabel>Misregistration</skos:altLabel>
+        <rdfs:label>Misregistration</rdfs:label>
+        <skos:prefLabel>Chemical shift</skos:prefLabel>
     </owl:Class>
     
 
@@ -907,13 +899,13 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chemical_Shift_Second_Kind">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chemical_Shift"/>
+        <rdfs:label>Black boundary artefact</rdfs:label>
+        <rdfs:label>Black line artifact</rdfs:label>
         <rdfs:label>Chemical shift 2nd kind</rdfs:label>
-        <skos:altLabel>Black boundary artefact</skos:altLabel>
-        <skos:altLabel>Black line artifact</skos:altLabel>
-        <skos:altLabel>Edging artifact</skos:altLabel>
-        <skos:altLabel>Indian ink artefact</skos:altLabel>
-        <skos:altLabel>Phase cancellation artefact</skos:altLabel>
-        <skos:altLabel>Phase cancellation artifact</skos:altLabel>
+        <rdfs:label>Edging artifact</rdfs:label>
+        <rdfs:label>Indian ink artefact</rdfs:label>
+        <rdfs:label>Phase cancellation artefact</rdfs:label>
+        <rdfs:label>Phase cancellation artifact</rdfs:label>
         <skos:prefLabel>Fat-water signal cancellation artefact</skos:prefLabel>
     </owl:Class>
     
@@ -984,7 +976,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Dark_Bands_Artifact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Intensity_Artefact"/>
         <rdfs:label>Black bands artefact</rdfs:label>
-        <rdfs:label>Dark bands artefact</rdfs:label>
+        <skos:prefLabel>Dark bands artefact</skos:prefLabel>
     </owl:Class>
     
 
@@ -1016,7 +1008,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Diastole</rdfs:label>
-        <rdfs:label>Ventricular Diastole</rdfs:label>
+        <skos:prefLabel>Ventricular Diastole</skos:prefLabel>
     </owl:Class>
     
 
@@ -1100,7 +1092,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Field_Inhomogeneity_Artefact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Machine_Related_Artefact"/>
-        <rdfs:label>Field inhomogeneity artefact</rdfs:label>
+        <CMR-QA:shortLabel>Field inhomogeneity</CMR-QA:shortLabel>
+        <skos:prefLabel>Field inhomogeneity artefact</skos:prefLabel>
     </owl:Class>
     
 
@@ -1111,6 +1104,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Blood_Flow_Motion_Artefact"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Loss_Artefact"/>
         <rdfs:label>Flow-related signal loss</rdfs:label>
+        <skos:prefLabel>Flow-related signal loss artefact</skos:prefLabel>
     </owl:Class>
     
 
@@ -1132,8 +1126,8 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ringing_Artefact"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Processing_Dependant_Artefact"/>
         <rdfs:label>Gibbs artefact</rdfs:label>
-        <skos:altLabel>Spectral leakage artefact</skos:altLabel>
-        <skos:altLabel>Truncation artefact</skos:altLabel>
+        <rdfs:label>Spectral leakage artefact</rdfs:label>
+        <rdfs:label>Truncation artefact</rdfs:label>
         <skos:prefLabel>Gibbs artefact</skos:prefLabel>
     </owl:Class>
     
@@ -1194,7 +1188,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Distortion_Artefact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
-        <rdfs:label>Image distortion artefact</rdfs:label>
+        <rdfs:label>Image distortion</rdfs:label>
+        <skos:prefLabel>Image distortion artefact</skos:prefLabel>
     </owl:Class>
     
 
@@ -1204,13 +1199,13 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Planning_Issue">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
         <rdfs:label xml:lang="en">Foreshortened</rdfs:label>
+        <rdfs:label>Image planning issue</rdfs:label>
+        <rdfs:label xml:lang="en">Off axis</rdfs:label>
         <rdfs:label xml:lang="en">Off-axis</rdfs:label>
         <rdfs:label xml:lang="en">Out of axis</rdfs:label>
         <rdfs:label xml:lang="en">Out of plane</rdfs:label>
         <rdfs:label>Wrong image plane</rdfs:label>
         <rdfs:label xml:lang="en">Wrong plane</rdfs:label>
-        <skos:prefLabel>Image planning issue</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Off axis</skos:prefLabel>
         <skos:prefLabel>Wrong image plane orientation</skos:prefLabel>
     </owl:Class>
     
@@ -1334,7 +1329,9 @@
         <CMR-QA:semanticType>Qualitative Concept</CMR-QA:semanticType>
         <CMR-QA:semanticTypeID>T033</CMR-QA:semanticTypeID>
         <CMR-QA:semanticTypeID>T080</CMR-QA:semanticTypeID>
+        <CMR-QA:shortLabel>Issue</CMR-QA:shortLabel>
         <rdfs:comment>An issue is observed in a view, chamber and cardiac cycle. Optionally one may define more fine grained description (if it applies) about concrete chamber location (e.g., apex) or if single or multible slices were affected.</rdfs:comment>
+        <rdfs:label>Imaging quality issue</rdfs:label>
         <skos:prefLabel>Image quality issue</skos:prefLabel>
     </owl:Class>
     
@@ -1371,8 +1368,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Inter-view_Motion_Artefact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Motion_Artefact"/>
+        <rdfs:label>Inter-view Artefact</rdfs:label>
         <rdfs:label>Inter-view motion artefact</rdfs:label>
-        <skos:altLabel>Inter-view Artefact</skos:altLabel>
     </owl:Class>
     
 
@@ -1381,8 +1378,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Intra-view_Motion_Artefact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Motion_Artefact"/>
+        <rdfs:label>Intra-view artefact</rdfs:label>
         <rdfs:label>Intra-view motion artefact</rdfs:label>
-        <skos:altLabel>Intra-view artefact</skos:altLabel>
     </owl:Class>
     
 
@@ -1428,7 +1425,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#LVOT_View"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Long_Axis_View"/>
         <CMR-QA:shortLabel>3ch</CMR-QA:shortLabel>
-        <skos:prefLabel>LVOT sagittal view</skos:prefLabel>
+        <rdfs:label>LVOT sagittal view</rdfs:label>
         <skos:prefLabel>Three chambers view</skos:prefLabel>
     </owl:Class>
     
@@ -1475,8 +1472,8 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Lack_Coverage">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
         <rdfs:comment>At acquisition time, the short axis stack might not cover the whole extent of the ventricles. This might affect either the basal or apical part of the ventricles. We refer to this incorrect stack acquisition as &quot;lack of coverage&quot;.</rdfs:comment>
-        <rdfs:label xml:lang="en">Lack of coverage</rdfs:label>
         <rdfs:label>Not fully covered</rdfs:label>
+        <skos:prefLabel xml:lang="en">Lack of coverage</skos:prefLabel>
     </owl:Class>
     
 
@@ -1581,6 +1578,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Machine_Related_Artefact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Technical_Issue"/>
         <rdfs:label>Hardware related artefact</rdfs:label>
         <skos:prefLabel>Machine related artefact</skos:prefLabel>
     </owl:Class>
@@ -1624,7 +1622,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Motion_Artefact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Patient-related_Artifact"/>
         <CMR-QA:shortLabel>Motion</CMR-QA:shortLabel>
-        <rdfs:label>Motion artefact</rdfs:label>
+        <skos:prefLabel>Motion artefact</skos:prefLabel>
     </owl:Class>
     
 
@@ -1634,7 +1632,8 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Motion_Ringing_Artefact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Motion_Artefact"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ringing_Artefact"/>
-        <rdfs:label>Motion ringing artefact</rdfs:label>
+        <rdfs:label>Motion ringing</rdfs:label>
+        <skos:prefLabel>Motion ringing artefact</skos:prefLabel>
     </owl:Class>
     
 
@@ -1695,7 +1694,8 @@ A mismatch of 5-10% is still acceptable due to the difficulty of contouring the 
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Off-resonance_Artefact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Intensity_Artefact"/>
-        <rdfs:label>Off-resonance artefact</rdfs:label>
+        <rdfs:label>Off resonance artefact</rdfs:label>
+        <skos:prefLabel>Off-resonance artefact</skos:prefLabel>
     </owl:Class>
     
 
@@ -1736,7 +1736,8 @@ A mismatch of 5-10% is still acceptable due to the difficulty of contouring the 
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Patient-related_Artifact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
-        <rdfs:label>Patient related artefact</rdfs:label>
+        <rdfs:label>Patient related artifact</rdfs:label>
+        <skos:prefLabel>Patient related artefact</skos:prefLabel>
     </owl:Class>
     
 
@@ -1792,7 +1793,7 @@ A mismatch of 5-10% is still acceptable due to the difficulty of contouring the 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#ROI_area">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures"/>
         <rdfs:comment>Area of a generic region of interest (ROI) in the image. Depending on the type of tissue it can be given in pixels^2, cm^2.</rdfs:comment>
-        <skos:prefLabel>ROI area</skos:prefLabel>
+        <rdfs:label>ROI area</rdfs:label>
         <skos:prefLabel>Region of interest area</skos:prefLabel>
     </owl:Class>
     
@@ -1849,9 +1850,9 @@ A mismatch of 5-10% is still acceptable due to the difficulty of contouring the 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Ringing_Artefact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
         <CMR-QA:shortLabel>Ringing</CMR-QA:shortLabel>
-        <rdfs:label>Ringing artefact</rdfs:label>
-        <skos:altLabel>Banding artefact</skos:altLabel>
-        <skos:altLabel>Rim artefact</skos:altLabel>
+        <rdfs:label>Banding artefact</rdfs:label>
+        <rdfs:label>Rim artefact</rdfs:label>
+        <skos:prefLabel>Ringing artefact</skos:prefLabel>
     </owl:Class>
     
 
@@ -1867,7 +1868,7 @@ A mismatch of 5-10% is still acceptable due to the difficulty of contouring the 
         <rdfs:label>SAS view</rdfs:label>
         <rdfs:label>SAX stack</rdfs:label>
         <rdfs:label>SAX view</rdfs:label>
-        <rdfs:label xml:lang="en">Short Axis Stack View</rdfs:label>
+        <skos:prefLabel xml:lang="en">Short Axis Stack View</skos:prefLabel>
     </owl:Class>
     
 
@@ -1934,8 +1935,8 @@ A mismatch of 5-10% is still acceptable due to the difficulty of contouring the 
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Intensity_Artefact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Artefact"/>
-        <rdfs:label>Signal intensity artefact</rdfs:label>
         <rdfs:label>Signal variation artefact</rdfs:label>
+        <skos:prefLabel>Signal intensity artefact</skos:prefLabel>
     </owl:Class>
     
 
@@ -1945,7 +1946,7 @@ A mismatch of 5-10% is still acceptable due to the difficulty of contouring the 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Loss_Artefact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Signal_Intensity_Artefact"/>
         <CMR-QA:shortLabel>Signal loss</CMR-QA:shortLabel>
-        <rdfs:label>Signal loss artefact</rdfs:label>
+        <skos:prefLabel>Signal loss artefact</skos:prefLabel>
     </owl:Class>
     
 
@@ -1963,7 +1964,8 @@ A mismatch of 5-10% is still acceptable due to the difficulty of contouring the 
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Spatial_Distortion_Artefact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Distortion_Artefact"/>
-        <rdfs:label>Spatial distortion artefact</rdfs:label>
+        <rdfs:label>Spatial distortion</rdfs:label>
+        <skos:prefLabel>Spatial distortion artefact</skos:prefLabel>
     </owl:Class>
     
 
@@ -1997,7 +1999,7 @@ A mismatch of 5-10% is still acceptable due to the difficulty of contouring the 
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Systole</rdfs:label>
-        <rdfs:label>Ventricular Systole</rdfs:label>
+        <skos:prefLabel>Ventricular Systole</skos:prefLabel>
     </owl:Class>
     
 

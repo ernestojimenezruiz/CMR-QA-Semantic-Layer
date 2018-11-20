@@ -77,19 +77,11 @@ class TripleGenerator(object):
         #self.rdfgraph.add( (quality_data_uri, CMR_QA.hasRAQualityScore, Literal()) )
         self.rdfgraph.add( (quality_data_uri, CMR_QA.hasImageIssue, image_issue_uri) )
         
+        ##Generate json file for annotations?
+        ##It can be another process.... given URI quality data and comment
+        ##We can later insert new triples and extend the graph
         
-        #Examples
-        #bob = URIRef("http://example.org/people/Bob")
-        #linda = BNode() # a GUID is generated
-        #name = Literal('Bob') # passing a string
-        #age = Literal(24) # passing a python int
-        #self.rdfgraph.add( (bob, RDF.type, FOAF.Person) )
-        #self.rdfgraph.add( (linda, FOAF.name, Literal('Linda') ) )
-        
-        
-        
-        
-        
+    
         
         
         
