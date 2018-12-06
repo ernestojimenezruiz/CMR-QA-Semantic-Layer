@@ -12,7 +12,9 @@ NAMESPACE_PREFIX = "cmrqa"
 
 
 #Classes
-Cine_MRI_Quality_Data = URIRef(BASE_URI + "Cine-MRI_Quality_Data")
+Cine_MRI_Quality_Data_Name="Cine-MRI_Quality_Data"
+Cine_MRI_Quality_Data = URIRef(BASE_URI + Cine_MRI_Quality_Data_Name)
+
 Imaging_Scan_Visit = URIRef(BASE_URI + "Imaging_Scan_Visit")
 Observer = URIRef(BASE_URI + "Observer")
 Image_Quality_Issue = URIRef(BASE_URI + "Image_Quality_Issue")
@@ -40,7 +42,8 @@ Suboptimal_Quality_Level = "Sub-optimal"
 
 
 ##Free text comment given
-hasQualityComment = URIRef(BASE_URI + "hasQualityComment")
+hasQualityComment_Name = "hasQualityComment"
+hasQualityComment = URIRef(BASE_URI + hasQualityComment_Name)
 
 #Numerical scores given
 hasLAQualityScore = URIRef(BASE_URI + "hasLAQualityScore")

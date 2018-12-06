@@ -10,7 +10,7 @@ from constants import CMR_QA
 
 class TripleGenerator(object):
     '''
-    Creates triples from CSV file according to CMR_QA ontology
+    Creates (basic) triples from CSV file according to CMR_QA ontology
     We use RDFlib: https://rdflib.readthedocs.io/en/stable/gettingstarted.html
     '''
 
@@ -82,6 +82,6 @@ class TripleGenerator(object):
         ##We can later insert new triples and extend the graph
         
     
-        
+    
         
         

@@ -6,6 +6,7 @@ Created on 19 Nov 2018
 from semantics.triple_generator import TripleGenerator
 import pandas as pd
 from csv_utils.csv_reader import CSVQAReader
+from semantics.query_rdf_graph import QueryRDFGraph
 
 file_csv = '/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100.csv'
 
@@ -20,3 +21,7 @@ data_xls.to_csv(file_csv, encoding='utf-8')
 
 output_file = '/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100.ttl'
 TripleGenerator(file_csv, output_file)
+
+
+qManager = QueryRDFGraph(output_file)
+qManager.getQualityComments()

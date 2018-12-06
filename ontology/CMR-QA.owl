@@ -1606,11 +1606,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Missing_data -->
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Missing_Data -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Missing_data">
+    <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Missing_Data">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Technical_Issue"/>
-        <CMR-QA:shortLabel>Missing</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>Incomplete</CMR-QA:shortLabel>
         <rdfs:label>Incomplete data</rdfs:label>
         <skos:prefLabel>Missing data</skos:prefLabel>
     </owl:Class>
@@ -2064,7 +2064,7 @@ A mismatch of 5-10% is still acceptable due to the difficulty of contouring the 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Unspecified_Issue">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
         <rdfs:comment>Cases were the concrete issue is not specified</rdfs:comment>
-        <rdfs:label>Unknown issue</rdfs:label>
+        <rdfs:label>Generic issue</rdfs:label>
         <skos:prefLabel>Unspecified issue</skos:prefLabel>
     </owl:Class>
     
