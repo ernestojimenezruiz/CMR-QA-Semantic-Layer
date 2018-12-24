@@ -48,7 +48,9 @@ class TripleGenerator(object):
         
         row_id = self.qa_reader.getRowID(row_dict)
         scan_date = self.qa_reader.getScanDate(row_dict).replace("'", "_")
-        participant_id = self.qa_reader.getPatientID(row_dict) + "-" + self.qa_reader.getPatienName(row_dict)
+        #participant_id = self.qa_reader.getPatientID(row_dict) + "-" + self.qa_reader.getPatienName(row_dict)
+        participant_id = self.qa_reader.getPatientID(row_dict)
+        participant_name = self.qa_reader.getPatienName(row_dict)
         ob_id = str(self.qa_reader.getObserver(row_dict)).lower()        
         comment = self.qa_reader.getQAComment(row_dict)
         
@@ -59,6 +61,7 @@ class TripleGenerator(object):
         ##Triples scan visit 
         self.rdfgraph.add( (scan_visit_uri, RDF.type, CMR_QA.Imaging_Scan_Visit) )
         self.rdfgraph.add( (scan_visit_uri, CMR_QA.participantId, Literal(participant_id)) )
+        self.rdfgraph.add( (scan_visit_uri, CMR_QA.participantName, Literal(participant_name)) )
         self.rdfgraph.add( (scan_visit_uri, CMR_QA.hasQualityData, quality_data_uri) )
         
         #Triples quality data

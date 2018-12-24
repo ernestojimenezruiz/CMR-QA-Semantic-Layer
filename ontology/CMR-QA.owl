@@ -526,9 +526,20 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#participantId">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#personId"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Anonimyzed code for the participant, composed by anonimyzed name and id</rdfs:comment>
+        <rdfs:comment>Anonimyzed ID for the participant.</rdfs:comment>
         <rdfs:label>Patient id</rdfs:label>
         <rdfs:label>Volunteer id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#participantName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#participantName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#personName"/>
+        <rdfs:comment>Anonimyzed name for the participant.</rdfs:comment>
+        <rdfs:label>Patient name</rdfs:label>
+        <skos:prefLabel>Volunteer name</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -536,6 +547,12 @@
     <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#personId -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#personId"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#personName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#personName"/>
     
 
 
@@ -1350,6 +1367,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#participantId"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#participantName"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>

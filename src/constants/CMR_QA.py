@@ -29,6 +29,7 @@ hasImageIssue = URIRef(BASE_URI + "hasImageIssue")
 #Data properties
 scanDate = URIRef(BASE_URI + "scanDate")
 participantId = URIRef(BASE_URI + "participantId")
+participantName = URIRef(BASE_URI + "participantName")
 observerId = URIRef(BASE_URI + "observerId")
 
 #General scores (to be calculated)
