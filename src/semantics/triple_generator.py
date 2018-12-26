@@ -58,10 +58,14 @@ class TripleGenerator(object):
         quality_data_uri = CMR_QA.createQualityDataResourceURI(scan_date)
         image_issue_uri = CMR_QA.createQualityIssueResourceURI(len(comment))
         
+        scan_date = scan_date.replace("_", "-")
+        
+        
         ##Triples scan visit 
         self.rdfgraph.add( (scan_visit_uri, RDF.type, CMR_QA.Imaging_Scan_Visit) )
         self.rdfgraph.add( (scan_visit_uri, CMR_QA.participantId, Literal(participant_id)) )
         self.rdfgraph.add( (scan_visit_uri, CMR_QA.participantName, Literal(participant_name)) )
+        self.rdfgraph.add( (scan_visit_uri, CMR_QA.scanDate, Literal(scan_date)) )
         self.rdfgraph.add( (scan_visit_uri, CMR_QA.hasQualityData, quality_data_uri) )
         
         #Triples quality data

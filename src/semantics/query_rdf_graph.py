@@ -6,6 +6,7 @@ Created on 22 Nov 2018
 import rdflib
 from rdflib.plugins.sparql import prepareQuery
 from constants import CMR_QA
+import os
 
 class QueryRDFGraph(object):
     '''
@@ -28,7 +29,7 @@ class QueryRDFGraph(object):
     '''
     Returns dictionary URI_quality_data : quality_comment
     '''
-    def getQualityComments(self):
+    def getQualityComments(self, filename):
     
         #query = """SELECT DISTINCT ?uri ?comment
         #   WHERE {
@@ -48,8 +49,28 @@ class QueryRDFGraph(object):
         qres = self.rdfgraph.query(query_object)
         
         
+        
+        #absFilePath = os.path.abspath(__file__)
+        #fileDir = os.path.dirname(absFilePath)#module
+        #parentDir = os.path.dirname(fileDir)#src folder
+        #ROOT_DIR = os.path.dirname(parentDir)
+    
+        #file = open(ROOT_DIR + '/comments/' + filename, 'w')
+        file = open(filename, 'w') 
+        
+        
         #Return qres and store in file: id|comment -> row[0]|row[1]
         for row in qres:
             #print("%s has comment %s" % row)
-            print(row[0], row[1])
+            label=row[0].split("#")[1]
+            comment=row[1]
+            comment=comment.replace("&"," and ")
+            comment=comment.replace("/"," and ")
+            comment=comment.replace("$","4")
+            comment=comment.replace("2 ","2ch ")
+            comment=comment.replace("4 ","4ch ")
+            print(label, comment)
+            print(label + "|" + comment, file=file)
+            
+            
             

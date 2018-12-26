@@ -1494,6 +1494,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Lack_Coverage">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Image_Quality_Issue"/>
+        <CMR-QA:shortLabel>Not covered</CMR-QA:shortLabel>
         <rdfs:comment>At acquisition time, the short axis stack might not cover the whole extent of the ventricles. This might affect either the basal or apical part of the ventricles. We refer to this incorrect stack acquisition as &quot;lack of coverage&quot;.</rdfs:comment>
         <rdfs:label>Not fully covered</rdfs:label>
         <skos:prefLabel xml:lang="en">Lack of coverage</skos:prefLabel>
@@ -1634,6 +1635,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Missing_Data">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Technical_Issue"/>
         <CMR-QA:shortLabel>Incomplete</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>Missing</CMR-QA:shortLabel>
         <rdfs:label>Incomplete data</rdfs:label>
         <skos:prefLabel>Missing data</skos:prefLabel>
     </owl:Class>
@@ -1815,6 +1817,7 @@ A mismatch of 5-10% is still acceptable due to the difficulty of contouring the 
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#ROI_area">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures"/>
+        <CMR-QA:shortLabel>ROI</CMR-QA:shortLabel>
         <rdfs:comment>Area of a generic region of interest (ROI) in the image. Depending on the type of tissue it can be given in pixels^2, cm^2.</rdfs:comment>
         <rdfs:label>ROI area</rdfs:label>
         <skos:prefLabel>Region of interest area</skos:prefLabel>

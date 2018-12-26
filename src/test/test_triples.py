@@ -24,4 +24,4 @@ TripleGenerator(file_csv, output_file)
 
 
 qManager = QueryRDFGraph(output_file)
-qManager.getQualityComments()
+qManager.getQualityComments("/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100_comments.txt")
