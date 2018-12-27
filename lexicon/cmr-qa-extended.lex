@@ -287,6 +287,7 @@ one-slice:CONC|single
 one-slice:CONC|1
 one-slice:CONC|1x
 one-slice:CONC|one
+all-slices:CONC|all
 affected:CONC|affected
 affected:CONC|affects
 Missing_data:CONC|not found
