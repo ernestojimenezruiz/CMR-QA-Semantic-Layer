@@ -26,3 +26,14 @@ class JSONTKBGAnnotation(object):
         #data["maps"][0]["id"]
         #data["masks"]["id"]
         #data["om_points"]
+        
+        #pprint(data["Annotations"])
+        for annotation in data["Annotations"]:
+            print(annotation)
+        
+        
+
+
+JSONTKBGAnnotation("/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100Annotations/tkbgtagger/image_quality_data_2014_04_30_5290.json")      
+
+

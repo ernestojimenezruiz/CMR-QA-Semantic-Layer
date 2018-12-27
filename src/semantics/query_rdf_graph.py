@@ -29,7 +29,7 @@ class QueryRDFGraph(object):
     '''
     Returns dictionary URI_quality_data : quality_comment
     '''
-    def getQualityComments(self, filename):
+    def getQualityComments(self):
     
         #query = """SELECT DISTINCT ?uri ?comment
         #   WHERE {
@@ -46,31 +46,8 @@ class QueryRDFGraph(object):
            
         #print(query2)
     
-        qres = self.rdfgraph.query(query_object)
+        return self.rdfgraph.query(query_object)
         
         
         
-        #absFilePath = os.path.abspath(__file__)
-        #fileDir = os.path.dirname(absFilePath)#module
-        #parentDir = os.path.dirname(fileDir)#src folder
-        #ROOT_DIR = os.path.dirname(parentDir)
-    
-        #file = open(ROOT_DIR + '/comments/' + filename, 'w')
-        file = open(filename, 'w') 
-        
-        
-        #Return qres and store in file: id|comment -> row[0]|row[1]
-        for row in qres:
-            #print("%s has comment %s" % row)
-            label=row[0].split("#")[1]
-            comment=row[1]
-            comment=comment.replace("&"," and ")
-            comment=comment.replace("/"," and ")
-            comment=comment.replace("$","4")
-            comment=comment.replace("2 ","2ch ")
-            comment=comment.replace("4 ","4ch ")
-            print(label, comment)
-            print(label + "|" + comment, file=file)
-            
-            
-            
+       

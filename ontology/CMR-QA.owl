@@ -556,6 +556,42 @@
     
 
 
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#predictedLAQualityScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#predictedLAQualityScore">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityScore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#predictedLVQualityScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#predictedLVQualityScore">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityScore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#predictedRAQualityScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#predictedRAQualityScore">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityScore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#predictedRVQualityScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#predictedRVQualityScore">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#hasQualityScore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#scanDate -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#scanDate">
@@ -872,6 +908,8 @@
         <CMR-QA:shortLabel>Apical</CMR-QA:shortLabel>
         <CMR-QA:shortLabel>Chamber apex</CMR-QA:shortLabel>
         <rdfs:label>Apical region</rdfs:label>
+        <rdfs:label>Apical slice</rdfs:label>
+        <rdfs:label>Lower slice</rdfs:label>
     </owl:Class>
     
 
@@ -883,6 +921,8 @@
         <CMR-QA:shortLabel>Basal</CMR-QA:shortLabel>
         <CMR-QA:shortLabel>Base</CMR-QA:shortLabel>
         <rdfs:label>Basal region</rdfs:label>
+        <rdfs:label>Basal slice</rdfs:label>
+        <rdfs:label>Upper slice</rdfs:label>
     </owl:Class>
     
 
@@ -1071,6 +1111,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures"/>
         <CMR-QA:shortLabel>EDV</CMR-QA:shortLabel>
         <rdfs:comment>Volume of the blood contained in a given chamber at end diastole, usually provided in ml.</rdfs:comment>
+        <rdfs:label>Diastolic volume</rdfs:label>
         <skos:prefLabel>End diastolic volume</skos:prefLabel>
     </owl:Class>
     
@@ -1082,6 +1123,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures"/>
         <CMR-QA:shortLabel>ESV</CMR-QA:shortLabel>
         <rdfs:comment>Volume of the blood contained in a given chamber at end systole, usually provided in ml.</rdfs:comment>
+        <rdfs:label>Systolic volume</rdfs:label>
         <skos:prefLabel>End systolic volume</skos:prefLabel>
     </owl:Class>
     
@@ -1624,6 +1666,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Midventricular_Region">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Chamber_Location"/>
+        <CMR-QA:shortLabel>Mid slice</CMR-QA:shortLabel>
         <rdfs:label>Midventricle</rdfs:label>
         <skos:prefLabel>Midventricular region</skos:prefLabel>
     </owl:Class>
@@ -2001,6 +2044,7 @@ A mismatch of 5-10% is still acceptable due to the difficulty of contouring the 
     <owl:Class rdf:about="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Stroke_Volume">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Analysis_Measures"/>
         <CMR-QA:shortLabel>SV</CMR-QA:shortLabel>
+        <CMR-QA:shortLabel>SVs</CMR-QA:shortLabel>
         <rdfs:comment>Stroke volume is the difference between end diastolic and end systolic volumes, for a given chamber. SV=EDV-ESV</rdfs:comment>
         <rdfs:comment>Stroke volume is the difference in blood volume inside the ventricle between end diastole and end systole. Stroke volumes for the left and right ventricle should be approximately the same,with a 5-10% mismatch. Higher levels of mismatch can indicate either a technical issue (such as lack of coverage or artifact) or, less likely, a patient issue (such as pathology).</rdfs:comment>
         <skos:prefLabel>Stroke volume</skos:prefLabel>

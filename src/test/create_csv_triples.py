@@ -19,9 +19,35 @@ data_xls.to_csv(file_csv, encoding='utf-8')
 #csvreader=qa_reader.getCSVReader()
 
 
+#creates triples
 output_file = '/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100.ttl'
 TripleGenerator(file_csv, output_file)
 
 
+#prepares comments
 qManager = QueryRDFGraph(output_file)
-qManager.getQualityComments("/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100_comments.txt")
+qres = qManager.getQualityComments()
+
+
+file = open("/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100_comments.txt", 'w') 
+        
+        
+#Return qres and store in file: id|comment -> row[0]|row[1]
+for row in qres:
+    #print("%s has comment %s" % row)
+    label=row[0].split("#")[1]
+    comment=row[1]
+    #Minor fixes
+    comment=comment.replace("&"," and ")
+    comment=comment.replace("/"," and ")
+    comment=comment.replace("$","4")
+    comment=comment.replace("2 ","2ch ")
+    comment=comment.replace("4 ","4ch ")
+    comment=comment.replace("vol.","volume")
+    print(label, comment)
+    print(label + "|" + comment, file=file)
+            
+            
+            
+
+
