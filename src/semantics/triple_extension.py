@@ -76,6 +76,11 @@ class TripleExtension(object):
             print(annotation)
         
         
+        chars=[".",";"]
+        
+        foo = ( [pos for pos, char in enumerate(comment) if char in chars])
+        print(comment, foo)
+        
         #Group identified comments by offset. Groups will be defined by "." and ";", subcomments by ","
             
         

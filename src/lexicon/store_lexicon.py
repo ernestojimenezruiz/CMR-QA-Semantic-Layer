@@ -22,5 +22,5 @@ class StoreLexiconOntology:
         
         for cls in lexicon.keys():
             for label in lexicon[cls]:
-                print(cls + ':' + next(iter(semGroups[cls])) + "|" + label) 
-                print(cls + ':' + next(iter(semGroups[cls])) + "|" + label, file=file)
+                print(cls + ':' + next(iter(semGroups[cls])) + "|" + label.lower()) 
+                print(cls + ':' + next(iter(semGroups[cls])) + "|" + label.lower(), file=file)

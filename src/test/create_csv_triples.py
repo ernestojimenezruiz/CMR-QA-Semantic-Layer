@@ -36,7 +36,7 @@ file = open("/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100_c
 for row in qres:
     #print("%s has comment %s" % row)
     label=row[0].split("#")[1]
-    comment=row[1]
+    comment=row[1].lower()
     #Minor fixes
     comment=comment.replace("&"," and ")
     comment=comment.replace("/"," and ")
@@ -44,6 +44,9 @@ for row in qres:
     comment=comment.replace("2 ","2ch ")
     comment=comment.replace("4 ","4ch ")
     comment=comment.replace("vol.","volume")
+    comment=comment.replace("1 ","one ")
+    comment=comment.replace("several","multiple")
+    comment=comment.replace("some","few")
     print(label, comment)
     print(label + "|" + comment, file=file)
             
