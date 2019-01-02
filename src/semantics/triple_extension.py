@@ -92,10 +92,15 @@ class TripleExtension(object):
         
         #Giving a better type may be difficult... but we can exploit the ontology (e.g. subclasses of Image issue)
         #We coudl read definition of ontology and the populate according to the restrictions in a "semi"-automatic fashion
-        #With OWLready may even be easy to find the links between issue and  outcome meausres for example
+        #With OWLready may even be easy to find the links between issue and outcome meausres for example
         #For cardinality use custom elements
-        #As above we are getting the basic information detected. With patterns we may get more. Apply patterns first? It may makse sense or have several iterations.
+        #As above we are getting the basic information detected. With patterns we may get more. Apply patterns first? It may make sense or have several iterations.
         #Note that we will need to create instances for type of issue, etc. id of issue may be similar to id of quality study
+        
+        #Classify few and slice as cardinality with some sort of pattern?  
+        
+        #Answer with onto  about quality issue
+        #What (class isuse), where (chamber and view), when (cycle), how (measure), how many (cardinality), etc
         
         
         

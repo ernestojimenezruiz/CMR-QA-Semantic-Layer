@@ -1,6 +1,5 @@
 from owlready2 import *
-#from traitlets.config.application import catch_config_error
-#import lexicon
+from semantics.ontology_access import OntologyAccess
 
 
 #Class to extract the lexicon from the ontology annotations
@@ -11,15 +10,14 @@ class ExtractLexiconOntology:
     
     def __init__(self, pathontos, urionto):
         
-        self.urionto = urionto
-        
         #Entries with key=name class and values the list of labels
         self.lexicon = {} # or with dict()
         #Entries with key=name class and values the list of semantic groups
         self.semGroups = {}
         
-        #List from owlready2
-        onto_path.append(pathontos) #For local ontologies
+        #oads ontology
+        self.onto_access = OntologyAccess(pathontos, urionto)
+        self.onto_access.loadOntology(True)        
     
     
     def getLexiconForClasses(self):
@@ -29,25 +27,12 @@ class ExtractLexiconOntology:
     def getSemGroupsForClasses(self):
         return self.semGroups
       
-      
-    def loadOntology(self, classify):   
-        
-        self.onto = get_ontology(self.urionto)
-        self.onto.load()
-        
-        #self.classifiedOnto = get_ontology(self.urionto + '_classified')        
-        if classify:
-            with self.onto:
-                sync_reasoner()  #it does add inferences to ontology
-            
-        #report problem with unsat (Nothing not declared....)
-        #print(list(self.onto.inconsistent_classes()))
-        
-        
+    
         
     def extractLexicon(self):
             
-        for cls in list(self.onto.classes()):
+        #for cls in list(self.onto.classes()):
+        for cls in list(self.onto_access.getOntology().classes()):
          
             self.lexicon[cls.name]=set()
             self.semGroups[cls.name]=set()
