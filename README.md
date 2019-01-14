@@ -23,7 +23,7 @@ annotations. Our approach has the potential to be extended to broader projects a
 
 ## References
 
-- Valentina Carapella, Ernesto Jiménez-Ruiz. **A Knowledge Graph for the Quality Assessment of Cardiovascular Magnetic Resonance Imaging Data**. AI in Cardiac Imaging Conference 2019. ([Poster]())
+- Valentina Carapella, Ernesto Jiménez-Ruiz. **A Knowledge Graph for the Quality Assessment of Cardiovascular Magnetic Resonance Imaging Data**. AI in Cardiac Imaging Conference 2019. ([Poster](https://github.com/ernestojimenezruiz/CMR-QA-Semantic-Layer/blob/master/AI_Cardiac_Imaging_poster_2019.pdf))
 - Valentina Carapella, Ernesto Jiménez-Ruiz, Elena Lukaschuk, Nay Aung, Kenneth Fung, José Miguel Paiva, Mihir Sanghvi, Stefan Neubauer, Steffen E. Petersen, Ian Horrocks, Stefan K. Piechnik:
 **Towards the Semantic Enrichment of Free-Text Annotation of Image Quality Assessment for UK Biobank Cardiac Cine MRI Scans**. 
 LABELS/DLMIA@MICCAI 2016: 238-248. ([PDF](https://www.cs.ox.ac.uk/files/8298/ukbb-labels-2016_id7.pdf))
