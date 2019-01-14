@@ -6,8 +6,8 @@ reports are written associated to the patient/volunteer scans. This rich free-te
 provide automatic image quality assessment if efficiently processed and structured. This work aims at showing how the use
 of Semantic Web technology for structuring free-text documentation can provide
 means for automatic image quality assessment. We aim to design and implement
-a semantic layer for a special dataset, the annotations made in the context of the
-UK Biobank Cardiac Cine MRI pilot study. This semantic layer will be a powerful tool to automatically infer or validate quality scores for clinical images and
+a **semantic layer** and a **knowledge graph** for a special dataset, the annotations made in the context of the
+UK Biobank Cardiac Cine MRI pilot study. This semantic layer in combination with the representation power of the knowledge graph will be a powerful tool to automatically infer or validate quality scores for clinical images and
 efficiently query image databases based on quality information extracted from the
 annotations. Our approach has the potential to be extended to broader projects and ultimately employed in the clinical setting.
 
