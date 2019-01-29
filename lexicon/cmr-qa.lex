@@ -176,7 +176,6 @@ Medical_Imaging_Study:PROC|medical imaging study
 Midventricular_Region:ANAT|midventricular region
 Midventricular_Region:ANAT|midventricle
 Midventricular_Region:ANAT|mid slice
-Missing_Data:CONC|missing
 Missing_Data:CONC|missing data
 Missing_Data:CONC|incomplete data
 Missing_Data:CONC|incomplete
@@ -249,6 +248,7 @@ Triggering_Issue:CONC|triggering issue
 Triggering_Issue:CONC|electrocardiogram gating issue
 Triggering_Issue:CONC|miss-triggering
 Triggering_Issue:CONC|mistriggered
+Triggering_Issue:CONC|mis-triggered
 Triggering_Issue:CONC|mistriggering
 Unspecified_Issue:CONC|unspecified issue
 Unspecified_Issue:CONC|generic issue

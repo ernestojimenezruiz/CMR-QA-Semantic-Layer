@@ -7,7 +7,9 @@ import rdflib
 from rdflib.plugins.sparql import prepareQuery
 from constants import CMR_QA
 import json
-
+from annotations.annotation_reader import JSONTKBGAnnotationAccess
+from owlready2 import *
+from semantics.ontology_access import OntologyAccess
 
 class TripleExtension(object):
     '''
@@ -29,14 +31,28 @@ class TripleExtension(object):
         #The ones extracted directly from CSV file
         self.loadCurrentTriples(file_rdf)
         
-        #It queries from current RDF grapg the quality data ids
+        #It queries from current RDF graph the quality data ids
         self.queryQualityDataIds()
+        
+        #set upd ontology
+        self.setUpOntology()
         
         for row in self.qualityDataURIComments:
             self.processJSON4QualityComment(row[0], row[1], path_json_annotations)
             
         
     
+    
+    def setUpOntology(self):
+        folder_ontos="/home/ejimenez-ruiz/Documents/UK_BioBank/CMR-QA-ontology"
+        uri_onto="http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA"
+
+        self.onto_access = OntologyAccess(folder_ontos, uri_onto)
+        self.onto_access.loadOntology(True)
+    
+    
+    
+       
     
     
     def loadCurrentTriples(self, file_rdf):
@@ -70,18 +86,109 @@ class TripleExtension(object):
         with open(file) as f:
             data = json.load(f)
         
-        print(quality_name)    
-        print(comment)
-        for annotation in data["Annotations"]:
-            print(annotation)
-        
-        
+        print(quality_name)   
+         
+         
+        #1. Group identified comments by offset. Groups will be defined by "." and ";", subcomments by ","
+        #Characters to split different comments
         chars=[".",";"]
         
-        foo = ( [pos for pos, char in enumerate(comment) if char in chars])
-        print(comment, foo)
+        positions_end_comment = ( [pos for pos, char in enumerate(comment) if char in chars])
         
-        #Group identified comments by offset. Groups will be defined by "." and ";", subcomments by ","
+        size_comment= len(comment)-1
+        
+        if size_comment not in positions_end_comment:
+            positions_end_comment.append(size_comment) 
+        
+        print(comment, positions_end_comment)
+            
+        ##Initialize annotation groups 
+        sem_annotations = {}        
+        for i in range(len(positions_end_comment)):
+            sem_annotations[i]=[]
+            #print(str(i) + " - " + str(positions_end_comment[i]))
+        
+        tkbgAnnotationaccess = JSONTKBGAnnotationAccess()   
+        
+        for annotation in data["Annotations"]:
+            #print(annotation)
+            #print(tkbgAnnotationaccess.getCUI(annotation))
+            position = tkbgAnnotationaccess.getPosition(annotation)
+            for i in range(len(positions_end_comment)):
+                if position <= positions_end_comment[i]:
+                    sem_annotations[i].append(tkbgAnnotationaccess.getCUI(annotation))
+                    break
+         
+         
+        print(sem_annotations)
+  
+  
+        ##We may need to complement annotations with dictionary look-up. ch4 is missing in some cases
+        
+        
+        #2. Aswer questions: What (class issue), where (chamber, view, chamber location), when (cycle), how affects (measure), how many (cardinality), etc.
+        #We ask for subclasses of relevant classes
+        #Preliminary evaluation: issue and chamber
+        
+        
+        #When
+        #onto_access.getOntology().Cardiac_Cycle_Phase.descendants()
+        
+        
+        #FOR EVALUATION: otherwise we will perform the questions....
+        for key in sem_annotations:
+            
+            issue="Unspecified_Issue" #default issue
+            chambers=set()
+            chamber_locations=set()
+            views=set()
+            
+            for concept in sem_annotations.get(key):
+                
+                if concept in self.onto_access.getDescendantNamesForClassName("Motion_Artefact"):
+                    issue="Motion_Artefact"
+                elif concept in self.onto_access.getDescendantNamesForClassName("Artefact"):
+                    issue="Artefact"
+                elif concept in self.onto_access.getDescendantNamesForClassName("Lack_Coverage"):
+                    issue="Lack_Coverage"
+                elif concept in self.onto_access.getDescendantNamesForClassName("Image_Planning_Issue"):
+                    issue="Image_Planning_Issue"
+                elif concept in self.onto_access.getDescendantNamesForClassName("Pathology"):
+                    issue="Pathology"
+                elif concept in self.onto_access.getDescendantNamesForClassName("Triggering_Issue"):
+                    issue="Triggering_Issue"
+                elif concept in self.onto_access.getDescendantNamesForClassName("Missing_Data"):
+                    issue="Missing_Data"
+                elif concept in self.onto_access.getDescendantNamesForClassName("Poor_Quality"):
+                    issue="Poor_Quality"
+                elif concept in self.onto_access.getDescendantNamesForClassName("Unspecified_Issue"):
+                    issue="Unspecified_Issue"
+                
+                elif concept in self.onto_access.getDescendantNamesForClassName("Cardiac_Chamber"):
+                    chambers.append(concept)
+                elif concept in self.onto_access.getDescendantNamesForClassName("Chamber_Location"):
+                    chamber_locations.append(concept)
+                elif concept in self.onto_access.getDescendantNamesForClassName("Cardiac_Imaging_Plane"):
+                    views.append(concept)
+                
+         
+        
+        
+        
+        
+        
+        
+        
+        ##3. Apply rules by group of comments, only if not mentioned chamber for example. Otherwise we may bring ambiguity
+        #HLA (4ch) -> LA or RA
+        #VLA (2ch) -> LA 
+        #SAX -> LV or RV
+        
+            
+            
+        
+        
+        
             
         #Apply patterns and build new triples
         
@@ -94,14 +201,25 @@ class TripleExtension(object):
         #We coudl read definition of ontology and the populate according to the restrictions in a "semi"-automatic fashion
         #With OWLready may even be easy to find the links between issue and outcome meausres for example
         #For cardinality use custom elements
-        #As above we are getting the basic information detected. With patterns we may get more. Apply patterns first? It may make sense or have several iterations.
-        #Note that we will need to create instances for type of issue, etc. id of issue may be similar to id of quality study
+        
+        #As above we are getting the basic information detected. With patterns we may get more. Apply patterns first? It may make 
+        #sense or have several iterations.
+        
+        #Note that we will need to create instances for type of issue, etc. 
+        
+        #id of issue may be similar to id of quality study (to identify it better?)
         
         #Classify few and slice as cardinality with some sort of pattern?  
         
-        #Answer with onto  about quality issue
-        #What (class isuse), where (chamber and view), when (cycle), how (measure), how many (cardinality), etc
+        #Answer with onto  about quality issue:
+        #What (class issue), where (chamber and view), when (cycle), how (measure), how many (cardinality), etc.
         
+        #Create generic instances for the dimensions of an issue? la, ra, hla? (in ontology or additionally as external data?)
+        #Both modelling choices are acceptable. I.e. same la as generic chamber or specific chamber of specific patient. 
+        #It depends if we want to say sth specific about the chamber, whcih doe snot seem to be the case. 
+        #They seem to be generic elements we obtained from the countouring/visualization systems.
+        #  
+        #Chamber location also informative when missing slices
         
         
         
@@ -112,6 +230,8 @@ class TripleExtension(object):
         
     
 
-TripleExtension('/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100.ttl', '/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/FirstBatch100Annotations/tkbgtagger/')
+TripleExtension(
+    '/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/Batch1-100/FirstBatch100.ttl', 
+    '/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/Batch1-100/tkbgtagger/')
         
         

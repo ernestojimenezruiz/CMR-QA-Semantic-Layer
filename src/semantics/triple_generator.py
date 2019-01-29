@@ -17,7 +17,7 @@ class TripleGenerator(object):
     def __init__(self, csv_file_name, output_file):
         
         
-        self.qa_reader = CSVQAReader(csv_file_name)    
+        self.qa_reader = CSVQAReader(csv_file_name, False)    
         csvreader=self.qa_reader.getCSVReader()
 
         #Ignore first row
@@ -49,9 +49,9 @@ class TripleGenerator(object):
         row_id = self.qa_reader.getRowID(row_dict)
         scan_date = self.qa_reader.getScanDate(row_dict).replace("'", "_")
         #participant_id = self.qa_reader.getPatientID(row_dict) + "-" + self.qa_reader.getPatienName(row_dict)
-        participant_id = self.qa_reader.getPatientID(row_dict)
+        #participant_id = self.qa_reader.getPatientID(row_dict)
         participant_name = self.qa_reader.getPatienName(row_dict)
-        ob_id = str(self.qa_reader.getObserver(row_dict)).lower()        
+        #ob_id = str(self.qa_reader.getObserver(row_dict)).lower()        
         comment = self.qa_reader.getQAComment(row_dict)
         
         scan_visit_uri = CMR_QA.createScanVisitResourceURI(scan_date, row_id)
@@ -63,14 +63,14 @@ class TripleGenerator(object):
         
         ##Triples scan visit 
         self.rdfgraph.add( (scan_visit_uri, RDF.type, CMR_QA.Imaging_Scan_Visit) )
-        self.rdfgraph.add( (scan_visit_uri, CMR_QA.participantId, Literal(participant_id)) )
+        #self.rdfgraph.add( (scan_visit_uri, CMR_QA.participantId, Literal(participant_id)) )
         self.rdfgraph.add( (scan_visit_uri, CMR_QA.participantName, Literal(participant_name)) )
         self.rdfgraph.add( (scan_visit_uri, CMR_QA.scanDate, Literal(scan_date)) )
         self.rdfgraph.add( (scan_visit_uri, CMR_QA.hasQualityData, quality_data_uri) )
         
         #Triples quality data
         self.rdfgraph.add( (quality_data_uri, RDF.type, CMR_QA.Cine_MRI_Quality_Data) )
-        self.rdfgraph.add( (quality_data_uri, CMR_QA.hasObserver, CMR_QA.getObserverURI(ob_id)) )
+        #self.rdfgraph.add( (quality_data_uri, CMR_QA.hasObserver, CMR_QA.getObserverURI(ob_id)) )
         self.rdfgraph.add( (quality_data_uri, CMR_QA.hasQualityComment, Literal(comment)) )
         self.rdfgraph.add( (quality_data_uri, CMR_QA.hasLVQualityScore, Literal(self.qa_reader.getLVScore(row_dict))) )
         self.rdfgraph.add( (quality_data_uri, CMR_QA.hasRVQualityScore, Literal(self.qa_reader.getRVScore(row_dict))) )

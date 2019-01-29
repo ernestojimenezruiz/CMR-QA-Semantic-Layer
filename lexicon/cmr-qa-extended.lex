@@ -178,7 +178,6 @@ Midventricular_Region:ANAT|mid slice
 Midventricular_Region:ANAT|midventricular region
 Missing_Data:CONC|incomplete data
 Missing_Data:CONC|incomplete
-Missing_Data:CONC|missing
 Missing_Data:CONC|missing data
 Motion_Artefact:CONC|motion
 Motion_Artefact:CONC|motion artefact
@@ -248,6 +247,7 @@ Triggering_Issue:CONC|ecg gating issue
 Triggering_Issue:CONC|poor cardiac triggering
 Triggering_Issue:CONC|miss-triggering
 Triggering_Issue:CONC|mistriggered
+Triggering_Issue:CONC|mis-triggered
 Triggering_Issue:CONC|poor triggering
 Triggering_Issue:CONC|triggering issue
 Unspecified_Issue:CONC|generic issue
@@ -296,6 +296,7 @@ Missing_data:CONC|miss
 Missing_data:CONC|don't have
 Missing_data:CONC|no
 Missing_data:CONC|not finished
+Lack_Coverage:CONC|missing
 measure-affected:CONC|mismatch
 measure-affected:CONC|do not match
 measure-affected:CONC|don't match
