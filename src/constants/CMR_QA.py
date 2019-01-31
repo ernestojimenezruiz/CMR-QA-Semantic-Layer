@@ -64,6 +64,49 @@ Supervisor_Observer_Experience = "Supervisor"
 
 
 
+#Relevant vocabulary 
+
+Image_Quality_Issue_Name="Image_Quality_Issue"
+Image_Quality_Issue = URIRef(BASE_URI + Image_Quality_Issue_Name)
+
+Cine_MRI_Analysis_Measures_Name = "Cine-MRI_Analysis_Measures"
+Cine_MRI_Analysis_Measures = URIRef(BASE_URI + Cine_MRI_Analysis_Measures_Name)
+
+mayInfluence = URIRef(BASE_URI + "mayInfluence")
+
+
+Cardiac_Chamber_Name = "Cardiac_Chamber"
+Cardiac_Chamber = URIRef(BASE_URI + Cardiac_Chamber_Name)
+observedInChamber = URIRef(BASE_URI + "observedInChamber")
+
+
+Chamber_Location_Name = "Chamber_Location"
+Chamber_Location = URIRef(BASE_URI + Chamber_Location_Name)
+observedInChamberLocation = URIRef(BASE_URI + "observedInChamberLocation")
+
+
+
+Cardiac_Imaging_Plane_Name = "Cardiac_Imaging_Plane"
+Cardiac_Imaging_Plane = URIRef(BASE_URI + Cardiac_Imaging_Plane_Name)
+observedInView = URIRef(BASE_URI + "observedInView")
+
+
+
+Cardiac_Cycle_Name = "Cardiac_Cycle"
+Cardiac_Cycle = URIRef(BASE_URI + Cardiac_Cycle_Name)
+Cardiac_Cycle_Phase_Name = "Cardiac_Cycle_Phase"
+Cardiac_Cycle_Phase = URIRef(BASE_URI + Cardiac_Cycle_Phase_Name)
+
+observedInView = URIRef(BASE_URI + "observedInAllCardiacCycle")
+observedInView = URIRef(BASE_URI + "observedInCardiacCyclePhase")
+
+observedInView = URIRef(BASE_URI + "observedInSliceCardinality")
+
+
+
+
+
+
 ##Instances
 vc = URIRef(BASE_URI + "vc")
 el = URIRef(BASE_URI + "el")

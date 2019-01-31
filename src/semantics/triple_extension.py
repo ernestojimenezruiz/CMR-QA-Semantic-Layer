@@ -108,26 +108,48 @@ class TripleExtension(object):
             sem_annotations[i]=[]
             #print(str(i) + " - " + str(positions_end_comment[i]))
         
-        tkbgAnnotationaccess = JSONTKBGAnnotationAccess()   
+        tkbgAnnotationAccess = JSONTKBGAnnotationAccess()   
         
         for annotation in data["Annotations"]:
             #print(annotation)
             #print(tkbgAnnotationaccess.getCUI(annotation))
-            position = tkbgAnnotationaccess.getPosition(annotation)
+            position = tkbgAnnotationAccess.getPosition(annotation)
             for i in range(len(positions_end_comment)):
                 if position <= positions_end_comment[i]:
-                    sem_annotations[i].append(tkbgAnnotationaccess.getCUI(annotation))
+                    sem_annotations[i].append(tkbgAnnotationAccess.getCUI(annotation))
                     break
          
          
         print(sem_annotations)
   
   
-        ##We may need to complement annotations with dictionary look-up. ch4 is missing in some cases
+        ##TODO: We may need to complement annotations with dictionary look-up. ch4 is missing in some cases
         
         
         #2. Aswer questions: What (class issue), where (chamber, view, chamber location), when (cycle), how affects (measure), how many (cardinality), etc.
         #We ask for subclasses of relevant classes
+         #FOR EVALUATION: otherwise we will perform the questions....
+        for key in sem_annotations:
+            
+            issue="Unspecified_Issue" #default issue
+            chambers=set()
+            chamber_locations=set()
+            views=set()
+            
+            for concept in sem_annotations.get(key):
+                
+                if concept in self.onto_access.getDescendantNamesForClassName("Motion_Artefact"):
+                    pass
+                
+                elif concept in self.onto_access.getDescendantNamesForClassName("Cardiac_Chamber"):
+                    chambers.append(concept)
+                elif concept in self.onto_access.getDescendantNamesForClassName("Chamber_Location"):
+                    chamber_locations.append(concept)
+                elif concept in self.onto_access.getDescendantNamesForClassName("Cardiac_Imaging_Plane"):
+                    views.append(concept)
+        
+        
+        
         #Preliminary evaluation: issue and chamber
         
         
