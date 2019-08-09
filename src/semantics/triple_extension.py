@@ -37,9 +37,11 @@ class TripleExtension(object):
         #set upd ontology
         self.setUpOntology()
         
+        i=1
         for row in self.qualityDataURIComments:
+            print("Comments " + str(i))
             self.processJSON4QualityComment(row[0], row[1], path_json_annotations)
-            
+            i+=1
         
     
     
@@ -91,7 +93,12 @@ class TripleExtension(object):
          
         #1. Group identified comments by offset. Groups will be defined by "." and ";", subcomments by ","
         #Characters to split different comments
-        chars=[".",";"]
+        #We should split also by "," and then try to merge issues with previous one if for example issue is unspecified 
+        #and what is mentioned is compatible, no more mentions of views or issues, but sth about affecting volumes
+        #Merging issues may be wrt the comments before or after.
+        
+        
+        chars=[".",";",","]
         
         positions_end_comment = ( [pos for pos, char in enumerate(comment) if char in chars])
         
@@ -128,7 +135,6 @@ class TripleExtension(object):
         
         #2. Aswer questions: What (class issue), where (chamber, view, chamber location), when (cycle), how affects (measure), how many (cardinality), etc.
         #We ask for subclasses of relevant classes
-         #FOR EVALUATION: otherwise we will perform the questions....
         for key in sem_annotations:
             
             issue="Unspecified_Issue" #default issue
@@ -136,18 +142,27 @@ class TripleExtension(object):
             chamber_locations=set()
             views=set()
             
+            #Potential problems:
+            #e.g. image_quality_data_20140822_5741|motion artefact, sv not matching, ?draw sax slice 2ch on systole, artefact in la on 4ch (needs review)
+            # ?draw sax slice 2ch on systole -> two different views?
+            
             for concept in sem_annotations.get(key):
+                
+                print(concept)
                 
                 if concept in self.onto_access.getDescendantNamesForClassName("Motion_Artefact"):
                     pass
                 
                 elif concept in self.onto_access.getDescendantNamesForClassName("Cardiac_Chamber"):
-                    chambers.append(concept)
+                    chambers.add(concept)
                 elif concept in self.onto_access.getDescendantNamesForClassName("Chamber_Location"):
-                    chamber_locations.append(concept)
+                    chamber_locations.add(concept)
                 elif concept in self.onto_access.getDescendantNamesForClassName("Cardiac_Imaging_Plane"):
-                    views.append(concept)
-        
+                    views.add(concept)
+                
+                
+                
+                
         
         
         #Preliminary evaluation: issue and chamber
@@ -157,41 +172,7 @@ class TripleExtension(object):
         #onto_access.getOntology().Cardiac_Cycle_Phase.descendants()
         
         
-        #FOR EVALUATION: otherwise we will perform the questions....
-        for key in sem_annotations:
-            
-            issue="Unspecified_Issue" #default issue
-            chambers=set()
-            chamber_locations=set()
-            views=set()
-            
-            for concept in sem_annotations.get(key):
-                
-                if concept in self.onto_access.getDescendantNamesForClassName("Motion_Artefact"):
-                    issue="Motion_Artefact"
-                elif concept in self.onto_access.getDescendantNamesForClassName("Artefact"):
-                    issue="Artefact"
-                elif concept in self.onto_access.getDescendantNamesForClassName("Lack_Coverage"):
-                    issue="Lack_Coverage"
-                elif concept in self.onto_access.getDescendantNamesForClassName("Image_Planning_Issue"):
-                    issue="Image_Planning_Issue"
-                elif concept in self.onto_access.getDescendantNamesForClassName("Pathology"):
-                    issue="Pathology"
-                elif concept in self.onto_access.getDescendantNamesForClassName("Triggering_Issue"):
-                    issue="Triggering_Issue"
-                elif concept in self.onto_access.getDescendantNamesForClassName("Missing_Data"):
-                    issue="Missing_Data"
-                elif concept in self.onto_access.getDescendantNamesForClassName("Poor_Quality"):
-                    issue="Poor_Quality"
-                elif concept in self.onto_access.getDescendantNamesForClassName("Unspecified_Issue"):
-                    issue="Unspecified_Issue"
-                
-                elif concept in self.onto_access.getDescendantNamesForClassName("Cardiac_Chamber"):
-                    chambers.append(concept)
-                elif concept in self.onto_access.getDescendantNamesForClassName("Chamber_Location"):
-                    chamber_locations.append(concept)
-                elif concept in self.onto_access.getDescendantNamesForClassName("Cardiac_Imaging_Plane"):
-                    views.append(concept)
+        
                 
          
         
