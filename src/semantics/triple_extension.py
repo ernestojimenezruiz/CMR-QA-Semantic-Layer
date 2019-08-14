@@ -10,6 +10,7 @@ import json
 from annotations.annotation_reader import JSONTKBGAnnotationAccess
 from owlready2 import *
 from semantics.ontology_access import OntologyAccess
+from semantics.annotation_group import QualityIssueGroup
 
 class TripleExtension(object):
     '''
@@ -34,9 +35,10 @@ class TripleExtension(object):
         #It queries from current RDF graph the quality data ids
         self.queryQualityDataIds()
         
-        #set upd ontology
+        #set up ontology
         self.setUpOntology()
         
+        #One json file per comment
         i=1
         for row in self.qualityDataURIComments:
             print("Comments " + str(i))
@@ -80,6 +82,105 @@ class TripleExtension(object):
         
         
         
+    def interpretAnnotation(self, group, annotation):
+        
+        print(annotation)
+                
+        if annotation in self.onto_access.getDescendantNamesForClassName("Image_Quality_Issue"): #what
+            self.issue_data[group].setIssue(annotation)
+            #self.issue=annotation
+        elif annotation in self.onto_access.getDescendantNamesForClassName("Cardiac_Chamber"): #where
+            self.issue_data[group].addChamber(annotation)
+            #self.chambers.add(annotation)
+        elif annotation in self.onto_access.getDescendantNamesForClassName("Chamber_Location"):  #where
+            self.issue_data[group].addChamberLocation(annotation)
+            #self.chamber_locations.add(annotation)
+        elif annotation in self.onto_access.getDescendantNamesForClassName("Cardiac_Imaging_Plane"):  #where
+            self.issue_data[group].addView(annotation)
+            #self.views.add(annotation)
+        elif annotation in self.onto_access.getDescendantNamesForClassName("Cardiac_Cycle_Phase"): #when
+            self.issue_data[group].addCyclePhase(annotation)
+            #self.cycle_phases.add(annotation)
+        elif annotation in self.onto_access.getDescendantNamesForClassName("Cardiac_Image_Analysis_Outcome_Measures"): #how
+            self.issue_data[group].addMeasure(annotation)
+            #self.measures.add(annotation)
+        #How many: slice cardinality
+        elif annotation=="multiple-slices":                    
+            #self.cardinality="Multiple"
+            self.issue_data[group].setCardinality("Multiple")
+        elif annotation=="few-slices":                    
+            #self.cardinality="Few"
+            self.issue_data[group].setCardinality("Few")
+        elif annotation=="one-slice":                    
+            #self.cardinality="Single"
+            self.issue_data[group].setCardinality("Single")
+        #TODO: do we need to include "all" sliceS?
+            
+        ##TODO add modifiers and other elements
+            
+        #Simple rules
+        #mid:CONC|mid
+        #upper:CONC|upper
+        #lower:CONC|lower
+        
+        #partially:CONC|partially
+        #completelly:CONC|completelly
+        #slightly:CONC|slightly
+        
+        #only:CONC|only
+        
+        #throughout (the cycle) means > VS and VD in both phases
+        
+        #analysed
+        
+        #not-analysed
+        
+        #affected? Affected -> score 2
+        
+        #poor quality as unspecified issue
+        
+        #cardiac_atrium -> both chambers?
+        #cardiac_ventricle -> both chambers?
+        
+        
+        
+    def interpretAnnotationGroup(self):
+        
+        #Complement view (resp. chamber) depending on chamber (resp. view)
+        #LA(la) ^ LA-off-axis(x) -> obserbedIn(x, la)
+        #Similar for HLA_off_axis 
+        #If no other chamber/view specified then infer the most typical case or rise an ambiguity warning
+        
+        #Rule
+        #Presence of LVOT and 4ch -> HLA off axis (ok in 3ch but not in 4ch)
+        
+        
+        #ALso assign score for the infor in group
+        
+        
+        #1-slice  or few -> 2
+        #Multiple slices -> typically 3 
+        
+        #Missing slices: SAX
+        
+        
+        pass
+    
+    
+    def interpretFullComment(self):
+        
+        #How to infer score from comments. Modifier will play an important role
+        #Quality of comment? wrt dimensions
+        
+        #Merge scores!
+          
+        pass
+    
+        
+        
+        
+        
+        
     def processJSON4QualityComment(self, quality_uri, comment, path_json_annotations):
         
         quality_name = quality_uri.split("#")[1]
@@ -94,7 +195,7 @@ class TripleExtension(object):
         #1. Group identified comments by offset. Groups will be defined by "." and ";", subcomments by ","
         #Characters to split different comments
         #We should split also by "," and then try to merge issues with previous one if for example issue is unspecified 
-        #and what is mentioned is compatible, no more mentions of views or issues, but sth about affecting volumes
+        #and what is mentioned is compatible, no more mentions of views or issues, but sth about affecting volumes (this seems to be the typial case)
         #Merging issues may be wrt the comments before or after.
         
         
@@ -135,33 +236,32 @@ class TripleExtension(object):
         
         #2. Aswer questions: What (class issue), where (chamber, view, chamber location), when (cycle), how affects (measure), how many (cardinality), etc.
         #We ask for subclasses of relevant classes
-        for key in sem_annotations:
+        #Each group is in principle an issue with some exception
+        
+        self.issue_data = dict()
+        
+        for group in sem_annotations:
             
-            issue="Unspecified_Issue" #default issue
-            chambers=set()
-            chamber_locations=set()
-            views=set()
+            self.issue_data[group]=QualityIssueGroup()
             
             #Potential problems:
             #e.g. image_quality_data_20140822_5741|motion artefact, sv not matching, ?draw sax slice 2ch on systole, artefact in la on 4ch (needs review)
             # ?draw sax slice 2ch on systole -> two different views?
             
-            for concept in sem_annotations.get(key):
+            
+            #We interpret annotation of group
+            for annotation in sem_annotations.get(group):
                 
-                print(concept)
-                
-                if concept in self.onto_access.getDescendantNamesForClassName("Motion_Artefact"):
-                    pass
-                
-                elif concept in self.onto_access.getDescendantNamesForClassName("Cardiac_Chamber"):
-                    chambers.add(concept)
-                elif concept in self.onto_access.getDescendantNamesForClassName("Chamber_Location"):
-                    chamber_locations.add(concept)
-                elif concept in self.onto_access.getDescendantNamesForClassName("Cardiac_Imaging_Plane"):
-                    views.add(concept)
+                self.interpretAnnotation(group, annotation)
                 
                 
                 
+                
+            
+            #Interpret group to apply further rules
+                
+                
+        ##Interpret groups. Merge them, and update scores
                 
         
         

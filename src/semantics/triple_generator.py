@@ -7,6 +7,7 @@ from csv_utils.csv_reader import CSVQAReader
 from rdflib import Graph, URIRef, BNode, Literal
 from rdflib.namespace import RDF, RDFS, OWL
 from constants import CMR_QA
+import re
 
 class TripleGenerator(object):
     '''
@@ -35,6 +36,37 @@ class TripleGenerator(object):
         self.qa_reader.closeFile()
         
         
+        
+    def processComments(self, comment):
+        
+        comment=comment.replace("&"," and ")
+        comment=comment.replace("/"," and ")
+        comment=comment.replace("$","4")
+        comment=comment.replace("2 ","2ch ")
+        comment=comment.replace("4 ","4ch ")
+        comment=comment.replace("vol.","volume")
+        comment=comment.replace("1 ","one ")
+        comment=comment.replace("several","multiple")
+        comment=comment.replace("some","few")
+        comment=comment.replace("basel","basal")
+        comment=comment.replace("vol.","volume")
+        comment=comment.replace("("," ( ")
+        comment=comment.replace(")"," ) ")
+        
+        #comment=comment.replace(",",", ")
+        #comment=comment.replace(";",", ")
+        #comment=comment.replace(".",", ")
+        comment = re.sub(r'(?<=[.,;])(?=[^\s])', r' ', comment)
+        
+        comment=comment.strip()
+        
+        if comment.endswith("."):
+            comment=comment[0:len(comment)-1]
+            
+        return comment
+        
+        
+        
     def createTriples(self, row_dict):
         
         #Instances of http://www.semanticweb.org/ukbiobank/ocmr_isg/CMR-QA#Cine-MRI_Quality_Data
@@ -52,7 +84,9 @@ class TripleGenerator(object):
         #participant_id = self.qa_reader.getPatientID(row_dict)
         participant_name = self.qa_reader.getPatienName(row_dict)
         #ob_id = str(self.qa_reader.getObserver(row_dict)).lower()        
-        comment = self.qa_reader.getQAComment(row_dict)
+        comment = self.processComments(self.qa_reader.getQAComment(row_dict))
+        
+        
         
         scan_visit_uri = CMR_QA.createScanVisitResourceURI(scan_date, row_id)
         quality_data_uri = CMR_QA.createQualityDataResourceURI(scan_date)

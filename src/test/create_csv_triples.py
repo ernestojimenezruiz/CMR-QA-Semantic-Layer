@@ -34,28 +34,33 @@ file = open("/home/ejimenez-ruiz/Documents/UK_BioBank/Input_Data/Batch1-100/Firs
 for row in qres:
     #print("%s has comment %s" % row)
     label=row[0].split("#")[1]
+    
     comment=row[1].lower()
-    #Minor fixes
-    comment=comment.replace("&"," and ")
-    comment=comment.replace("/"," and ")
-    comment=comment.replace("$","4")
-    comment=comment.replace("2 ","2ch ")
-    comment=comment.replace("4 ","4ch ")
-    comment=comment.replace("vol.","volume")
-    comment=comment.replace("1 ","one ")
-    comment=comment.replace("several","multiple")
-    comment=comment.replace("some","few")
-    comment=comment.replace("basel","basal")
     
-    #comment=comment.replace(",",", ")
-    #comment=comment.replace(";",", ")
-    #comment=comment.replace(".",", ")
-    comment = re.sub(r'(?<=[.,;])(?=[^\s])', r' ', comment)
+    #Minor fixes (moved to triple generator)
+    #comment=comment.replace("&"," and ")
+    #comment=comment.replace("/"," and ")
+    #comment=comment.replace("$","4")
+    #comment=comment.replace("2 ","2ch ")
+    #comment=comment.replace("4 ","4ch ")
+    #comment=comment.replace("vol.","volume")
+    #comment=comment.replace("1 ","one ")
+    #comment=comment.replace("several","multiple")
+    #comment=comment.replace("some","few")
+    #comment=comment.replace("basel","basal")
+    #comment=comment.replace("vol.","volume")
+    #comment=comment.replace("("," ( ")
+    #comment=comment.replace(")"," ) ")
     
-    comment=comment.strip()
+    ##comment=comment.replace(",",", ")
+    ##comment=comment.replace(";",", ")
+    ##comment=comment.replace(".",", ")
+    #comment = re.sub(r'(?<=[.,;])(?=[^\s])', r' ', comment)
     
-    if comment.endswith("."):
-        comment=comment[0:len(comment)-1]
+    #comment=comment.strip()
+    
+    #if comment.endswith("."):
+    #    comment=comment[0:len(comment)-1]
         
     
     print(label, comment)
