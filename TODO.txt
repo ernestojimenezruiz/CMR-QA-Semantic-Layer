@@ -1,0 +1,32 @@
+REQUIRED new lexicon!
+- If ontology modified then generate new lex (in lEX folder) and new id4.gz file to be placed in UMLS folder (see lex2fi2)
+- lex2fi2 generates a new cmr-qa.fi4 in LEX, then place zipped version in UMLS
+- One may also want to rerun create_csv_triples to create new triples and comments to tag
+- Tagger: ernesto_test.py
+
+- Create file with QA annotations linked to MRI or CSV line identifier (see test_doc.txt document)
+- Create architecture diagram involving TKBG annotator and possibly BioPortal
+
+
+
+- 1. Read CSV file (OK)
+- 2. Create triples for each of the fields according to the ontology (OK)
+- 3. SPARQL queries (use reasoning with RDFlib? RDFox as external process that materializes?) to extract scan date, quality data and comment to feed the JSOn extraction
+- 4. Annotate text with  Rafa SW and Bioportal REST API. (keep link to data quality URI)
+- 5. Interpret json files and find the 5 key pieces of information
+- 5a. Apply patterns and rules fromo modifiers too 
+
+
+Add dependency with rdflib and related dependencies? (OK)
+
+Extract all mappings from CMR-QA in bioportal and get statitics. Ontology rich in synonyms, so LOOM should find many things.
+USe codes from old logmap repository: add some of these sources to new LogMap repo (ok I think)
+- Use python to access Bioportal API. Get mappings by class. For the whole ontology there are not many classes...
+	* Java codes worked: results in Documents/BioPortal/Mappings
+- Keep relevant ontologies plus statistics
+- Extend mappings with LogMap and perhaps a bit of manual curation for some cases. For relevant ontologies. Give statistics too,
+
+Create arquitecture graph with components. 
+Also envisaged architecture for future? Excel file with autocompletion/suggestion from ontology
+Also with query interface like SemFacet and OptiqueVQS, or PepeSearch. For this we need synthetic data and have a public repository. 
+Datasets in figshare perhaps.
