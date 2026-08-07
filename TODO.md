@@ -1,3 +1,15 @@
+
+## Fixes
+- [2026-08-07] In `src\tests\test_annotator.py` the link `url = "https://krono.act.uji.es/annotator/cmr-qa/"` gives 404 - **TODO**
+
+## Repo consolidation
+- [2026-08-07] Add synthetic data to the repo - **TODO**
+- [2026-08-07] Remove all hard-coded links to local paths and substitute with synthetic data in repo - **TODO**
+- [2026-08-07] Create basic run file to read ontology and process QA (comments) data - **TODO**
+- [2026-08-07] Update readme to describe example usage - **TODO**
+
+
+## New Features
 REQUIRED new lexicon!
 - If ontology modified then generate new lex (in lEX folder) and new id4.gz file to be placed in UMLS folder (see lex2fi2)
 - lex2fi2 generates a new cmr-qa.fi4 in LEX, then place zipped version in UMLS
@@ -26,7 +38,10 @@ USe codes from old logmap repository: add some of these sources to new LogMap re
 - Keep relevant ontologies plus statistics
 - Extend mappings with LogMap and perhaps a bit of manual curation for some cases. For relevant ontologies. Give statistics too,
 
+## New documentation
 Create arquitecture graph with components. 
 Also envisaged architecture for future? Excel file with autocompletion/suggestion from ontology
 Also with query interface like SemFacet and OptiqueVQS, or PepeSearch. For this we need synthetic data and have a public repository. 
 Datasets in figshare perhaps.
+
+

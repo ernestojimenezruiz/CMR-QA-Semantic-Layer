@@ -12,9 +12,25 @@ efficiently query image databases based on quality information extracted from th
 annotations. Our approach has the potential to be extended to broader projects and ultimately employed in the clinical setting.
 
 ## Source dependencies
+The tool requires
+
 - [Python 3](https://www.python.org/)
 - [Owlready2](https://pypi.org/project/Owlready2/): pip install Owlready2
 - [RDFLib](https://rdflib.readthedocs.io/en/stable/gettingstarted.html): pip install rdflib
+
+We recommend creating a virtual environment and installing locally using the `requirements.txt` file
+
+```
+python -m venv .cmrqa-venv #In the folder
+.\.cmrqa-venv\Scripts\activate #Windows Powershell
+pip install -r requirements.txt
+
+```
+
+# How to run the tool
+
+The folder `/examples` contains pipelines to run the tool.
+
 
 ## CMR-QA Ontology
 - Current version ([v0.4.6](https://github.com/ernestojimenezruiz/CMR-QA-Semantic-Layer/blob/master/ontology/CMR-QA.owl), November, 2018): [OWL format](https://raw.githubusercontent.com/ernestojimenezruiz/CMR-QA-Semantic-Layer/master/ontology/CMR-QA.owl) 
